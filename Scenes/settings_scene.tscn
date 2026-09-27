@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://catrx1i4fffpy"]
+
+[ext_resource type="Texture2D" uid="uid://bm7axb8c1bjqp" path="res://addons/greysSettings.jpg" id="1_cmf5w"]
+
+[node name="settings_scene" type="Node2D" unique_id=735084438]
+
+[node name="Background" type="TextureRect" parent="." unique_id=2133781009]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_cmf5w")
