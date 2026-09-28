@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ba6rbbbx6fc07"]
+
+[ext_resource type="Texture2D" uid="uid://bcvqqh5hkptry" path="res://addons/greys2.jpg" id="1_2khme"]
+[ext_resource type="Texture2D" uid="uid://dvt4jm7ag1cwk" path="res://addons/heart2-removebg-preview.png" id="2_6j6o5"]
+
+[node name="timer_scene" type="Node2D" unique_id=1018746441]
+
+[node name="Background" type="TextureRect" parent="." unique_id=812576605]
+offset_left = -22.0
+offset_top = -101.0
+offset_right = 1178.0
+offset_bottom = 799.0
+texture = ExtResource("1_2khme")
+
+[node name="HeartContainer" type="HBoxContainer" parent="." unique_id=206122632]
+offset_left = 183.00002
+offset_top = 70.0
+offset_right = 5099.0
+offset_bottom = 1070.0
+scale = Vector2(0.4405548, 0.1712431)
+
+[node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=180443796]
+layout_mode = 2
+texture = ExtResource("2_6j6o5")
+
+[node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=914644325]
+layout_mode = 2
+texture = ExtResource("2_6j6o5")
+
+[node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=1866033291]
+layout_mode = 2
+texture = ExtResource("2_6j6o5")
+
+[node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=610856829]
+layout_mode = 2
+texture = ExtResource("2_6j6o5")
+
+[node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=220276278]
+layout_mode = 2
+texture = ExtResource("2_6j6o5")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=534886812]
+offset_left = 507.0
+offset_top = 392.0
+offset_right = 720.0
+offset_bottom = 463.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1624834427]
+offset_left = 539.0
+offset_top = 465.0
+offset_right = 628.0
+offset_bottom = 541.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"

@@ -1,11 +1,11 @@
 extends Node2D
 
-@onready var garlic_container: HBoxContainer = $GarlicContainer
-@onready var garlic: TextureRect = $GarlicContainer/Garlic
-@onready var garlic_2: TextureRect = $GarlicContainer/Garlic2
-@onready var garlic_3: TextureRect = $GarlicContainer/Garlic3
-@onready var garlic_4: TextureRect = $GarlicContainer/Garlic4
-@onready var garlic_5: TextureRect = $GarlicContainer/Garlic5
+@onready var heart_container: HBoxContainer = $HeartContainer
+@onready var heart: TextureRect = $HeartContainer/Heart
+@onready var heart_2: TextureRect = $HeartContainer/Heart2
+@onready var heart_3: TextureRect = $HeartContainer/Heart3
+@onready var heart_4: TextureRect = $HeartContainer/Heart4
+@onready var heart_5: TextureRect = $HeartContainer/Heart5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 
@@ -33,21 +33,21 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 #lives visually so later you can always find alternative code. Now, dw abt it.
 
 		4:
-			garlic.hide()
+			heart.hide()
 		3:
-			garlic.hide()
-			garlic_2.hide()
+			heart.hide()
+			heart_2.hide()
 		2:
-			garlic.hide()
-			garlic_2.hide()
-			garlic_3.hide()
+			heart.hide()
+			heart_2.hide()
+			heart_3.hide()
 		1:
-			garlic.hide()
-			garlic_2.hide()
-			garlic_3.hide()
-			garlic_4.hide()
+			heart.hide()
+			heart_2.hide()
+			heart_3.hide()
+			heart_4.hide()
 		0:
-			garlic_container.hide() # just hides everything
+			heart_container.hide() # just hides everything
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)
