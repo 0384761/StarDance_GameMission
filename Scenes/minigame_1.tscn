@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Script" uid="uid://ly2b1legj7jo" path="res://Scenes/heart_1.gd" id="2_o6yob"]
 [ext_resource type="Texture2D" uid="uid://dvt4jm7ag1cwk" path="res://addons/heart2-removebg-preview.png" id="3_f6tb2"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="6_0uv5o"]
+[ext_resource type="Script" uid="uid://bcjnlvxu45n7q" path="res://Scenes/heart_2.gd" id="7_ojqsy"]
+[ext_resource type="Script" uid="uid://5w82r47gk7kl" path="res://Scenes/heart_3.gd" id="8_jmcek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d56g"]
 size = Vector2(1162, 41.5)
@@ -149,3 +152,44 @@ shape = SubResource("CircleShape2D_6d56g")
 
 [node name="Player" parent="." unique_id=986568745 instance=ExtResource("2_11mgy")]
 position = Vector2(940, 399.4299)
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("6_0uv5o")]
+position = Vector2(-520, -298)
+
+[node name="Heart2" type="Node2D" parent="." unique_id=2066281530]
+position = Vector2(305, 105)
+script = ExtResource("7_ojqsy")
+
+[node name="Heart2" type="TextureRect" parent="Heart2" unique_id=1427305250]
+offset_left = 453.00003
+offset_top = 274.44446
+offset_right = 807.0
+offset_bottom = 774.44446
+scale = Vector2(0.23516136, 0.22200772)
+texture = ExtResource("3_f6tb2")
+
+[node name="Area2D" type="Area2D" parent="Heart2" unique_id=629511182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heart2/Area2D" unique_id=2059112871]
+position = Vector2(495.00003, 328.73923)
+scale = Vector2(3.5599988, 5.520001)
+shape = SubResource("CircleShape2D_6d56g")
+
+[node name="Heart3" type="Node2D" parent="." unique_id=956563548]
+position = Vector2(-289, -139)
+script = ExtResource("8_jmcek")
+
+[node name="Heart2" type="TextureRect" parent="Heart3" unique_id=641143988]
+offset_left = 453.00003
+offset_top = 274.44446
+offset_right = 807.0
+offset_bottom = 774.44446
+scale = Vector2(0.23516136, 0.22200772)
+texture = ExtResource("3_f6tb2")
+
+[node name="Area2D" type="Area2D" parent="Heart3" unique_id=470012900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heart3/Area2D" unique_id=837365471]
+position = Vector2(495.00003, 328.73923)
+scale = Vector2(3.5599988, 5.520001)
+shape = SubResource("CircleShape2D_6d56g")

@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://ba6rbbbx6fc07"]
 
 [ext_resource type="Texture2D" uid="uid://bcvqqh5hkptry" path="res://addons/greys2.jpg" id="1_2khme"]
+[ext_resource type="Script" uid="uid://dgfca3q5ft5d1" path="res://Scenes/timer_scene.gd" id="1_6j6o5"]
 [ext_resource type="Texture2D" uid="uid://dvt4jm7ag1cwk" path="res://addons/heart2-removebg-preview.png" id="2_6j6o5"]
 
 [node name="timer_scene" type="Node2D" unique_id=1018746441]
+script = ExtResource("1_6j6o5")
 
 [node name="Background" type="TextureRect" parent="." unique_id=812576605]
 offset_left = -22.0

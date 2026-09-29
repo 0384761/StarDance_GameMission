@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bt0xxolepcdsh"]
+
+[ext_resource type="Script" uid="uid://clkf583wq3qha" path="res://Scenes/done_screen.gd" id="1_3rr80"]
+[ext_resource type="Texture2D" uid="uid://difi8yxvcp7eu" path="res://addons/greys4.jpg" id="2_1q1k2"]
+
+[node name="done_screen" type="Node2D" unique_id=484987828]
+script = ExtResource("1_3rr80")
+
+[node name="Background" type="TextureRect" parent="." unique_id=632546623]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1q1k2")
