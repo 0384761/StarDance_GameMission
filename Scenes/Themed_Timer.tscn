@@ -8,7 +8,8 @@ script = ExtResource("1_eksxx")
 [node name="Themed_Timer" type="RichTextLabel" parent="." unique_id=1827607525]
 offset_left = 540.0
 offset_top = 303.0
-offset_right = 695.0
-offset_bottom = 384.0
-theme_override_font_sizes/normal_font_size = 48
-text = "10.0"
+offset_right = 730.0
+offset_bottom = 391.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "0.0"

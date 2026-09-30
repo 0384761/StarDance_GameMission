@@ -8,3 +8,14 @@
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_cmf5w")
+
+[node name="Title" type="RichTextLabel" parent="Background" unique_id=651720438]
+clip_contents = false
+layout_mode = 0
+offset_left = 376.0
+offset_top = 152.0
+offset_right = 1082.0
+offset_bottom = 285.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 90
+text = "Settings"

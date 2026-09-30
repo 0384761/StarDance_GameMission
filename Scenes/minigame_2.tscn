@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cqloy35l3lxgr"]
 
-[ext_resource type="Texture2D" uid="uid://bbvkdmr3j0mmu" path="res://addons/brains.jpg" id="1_psbsm"]
 [ext_resource type="Script" uid="uid://vkx3u1excnbw" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
 [ext_resource type="Texture2D" uid="uid://bqjlv5x2wvnd3" path="res://addons/optionalscalpel.png" id="2_l4g8r"]
+[ext_resource type="Texture2D" uid="uid://dqvb3hgwd3pne" path="res://addons/greys5.jpg" id="2_wu6l1"]
 [ext_resource type="Script" uid="uid://cw3l556bio4ui" path="res://Scenes/button_1.gd" id="3_dfb65"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_dfb65"]
 [ext_resource type="Script" uid="uid://cni4ne1k7gd16" path="res://Scenes/button_2.gd" id="6_mmgun"]
@@ -13,9 +13,11 @@
 script = ExtResource("1_rfxq2")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1353699756]
-offset_right = 1200.0
-offset_bottom = 675.0
-texture = ExtResource("1_psbsm")
+offset_left = -8.0
+offset_top = -197.0
+offset_right = 1192.0
+offset_bottom = 703.0
+texture = ExtResource("2_wu6l1")
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=1429259539]
 custom_maximum_size = Vector2(450, 35)
@@ -62,7 +64,7 @@ texture_normal = ExtResource("2_l4g8r")
 script = ExtResource("8_wu6l1")
 
 [node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_dfb65")]
-position = Vector2(-529, -295)
+position = Vector2(-519, -302)
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
