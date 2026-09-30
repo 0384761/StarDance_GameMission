@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ci767ejaourx8"]
+
+[ext_resource type="Texture2D" uid="uid://difi8yxvcp7eu" path="res://addons/greys4.jpg" id="1_s2rrh"]
+
+[node name="lose_screen" type="Node2D" unique_id=56694313]
+
+[node name="Background" type="TextureRect" parent="." unique_id=706862012]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_s2rrh")
+
+[node name="Title" type="RichTextLabel" parent="Background" unique_id=2020898885]
+clip_contents = false
+layout_mode = 0
+offset_left = 406.0
+offset_top = 149.0
+offset_right = 1112.0
+offset_bottom = 282.0
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/normal_font_size = 90
+text = "Uh Oh... "
