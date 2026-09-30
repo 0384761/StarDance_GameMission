@@ -9,9 +9,6 @@
 [ext_resource type="Script" uid="uid://nvxpmtjyqd0e" path="res://Scenes/button_3.gd" id="7_h684j"]
 [ext_resource type="Script" uid="uid://nfwspwrxtrwu" path="res://Scenes/button_4.gd" id="8_wu6l1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lpgj"]
-size = Vector2(441, 33)
-
 [node name="minigame_2" type="Node2D" unique_id=164351163]
 script = ExtResource("1_rfxq2")
 
@@ -21,67 +18,51 @@ offset_bottom = 675.0
 texture = ExtResource("1_psbsm")
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=1429259539]
-offset_left = 87.0
-offset_top = 60.0
-offset_right = 587.0
-offset_bottom = 560.0
+custom_maximum_size = Vector2(450, 35)
+offset_left = 144.00002
+offset_top = 279.0
+offset_right = 594.0
+offset_bottom = 314.0
+rotation = -0.4981421
 scale = Vector2(0.5600006, 0.55999935)
 texture_normal = ExtResource("2_l4g8r")
 script = ExtResource("3_dfb65")
 
-[node name="Area2D" type="Area2D" parent="Button_1" unique_id=7978166]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_1/Area2D" unique_id=110988446]
-position = Vector2(251, 258.5)
-shape = SubResource("RectangleShape2D_6lpgj")
-
-[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_dfb65")]
-position = Vector2(-529, -295)
-
 [node name="Button_2" type="TextureButton" parent="." unique_id=322494453]
-offset_left = 284.0
-offset_top = 303.0
-offset_right = 784.0
-offset_bottom = 803.0
+custom_maximum_size = Vector2(450, 35)
+offset_left = 328.0
+offset_top = 459.0
+offset_right = 778.0
+offset_bottom = 494.0
+rotation = 0.26520225
 scale = Vector2(0.5585794, 0.6091796)
 texture_normal = ExtResource("2_l4g8r")
 script = ExtResource("6_mmgun")
 
-[node name="Area2D" type="Area2D" parent="Button_2" unique_id=90742145]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_2/Area2D" unique_id=891133373]
-position = Vector2(251, 258.5)
-shape = SubResource("RectangleShape2D_6lpgj")
-
 [node name="Button_3" type="TextureButton" parent="." unique_id=122260332]
-offset_left = 540.0
-offset_top = 82.0
-offset_right = 1040.0
-offset_bottom = 582.0
+custom_maximum_size = Vector2(450, 35)
+offset_left = 585.0
+offset_top = 271.0
+offset_right = 1035.0
+offset_bottom = 306.0
+rotation = -0.23205073
 scale = Vector2(0.5585794, 0.6091796)
 texture_normal = ExtResource("2_l4g8r")
 script = ExtResource("7_h684j")
 
-[node name="Area2D" type="Area2D" parent="Button_3" unique_id=1288303890]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_3/Area2D" unique_id=9186995]
-position = Vector2(251, 258.5)
-shape = SubResource("RectangleShape2D_6lpgj")
-
 [node name="Button_4" type="TextureButton" parent="." unique_id=927647124]
-offset_left = 802.0
-offset_top = 210.0
-offset_right = 1302.0
-offset_bottom = 710.0
+custom_maximum_size = Vector2(450, 35)
+offset_left = 1080.0
+offset_top = 364.0
+offset_right = 1530.0
+offset_bottom = 399.0
+rotation = 2.3847322
 scale = Vector2(0.5585794, 0.6091796)
 texture_normal = ExtResource("2_l4g8r")
 script = ExtResource("8_wu6l1")
 
-[node name="Area2D" type="Area2D" parent="Button_4" unique_id=2127986752]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button_4/Area2D" unique_id=1083771277]
-position = Vector2(251, 258.5)
-shape = SubResource("RectangleShape2D_6lpgj")
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_dfb65")]
+position = Vector2(-529, -295)
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
