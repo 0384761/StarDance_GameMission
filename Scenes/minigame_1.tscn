@@ -193,3 +193,8 @@ texture = ExtResource("3_f6tb2")
 position = Vector2(495.00003, 328.73923)
 scale = Vector2(3.5599988, 5.520001)
 shape = SubResource("CircleShape2D_6d56g")
+
+[connection signal="garlic_collected" from="Heart1" to="." method="_on_heart_1_garlic_collected"]
+[connection signal="garlic_collected" from="Heart2" to="." method="_on_heart_2_garlic_collected"]
+[connection signal="garlic_collected" from="Heart3" to="." method="_on_heart_3_garlic_collected"]
+[connection signal="garlic_collected" from="Heart3" to="." method="garlic_collected"]

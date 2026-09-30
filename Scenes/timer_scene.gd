@@ -1,11 +1,10 @@
 extends Node2D
-
-@onready var heart_container: HBoxContainer = $HeartContainer
-@onready var heart: TextureRect = $HeartContainer/Heart1
-@onready var heart_2: TextureRect = $HeartContainer/Heart2
-@onready var heart_3: TextureRect = $HeartContainer/Heart3
-@onready var heart_4: TextureRect = $HeartContainer/Heart4
-@onready var heart_5: TextureRect = $HeartContainer/Heart5
+@onready var garlic_container: HBoxContainer = $HeartContainer
+@onready var garlic: TextureRect = $HeartContainer/Heart1
+@onready var garlic_2: TextureRect = $HeartContainer/Heart2
+@onready var garlic_3: TextureRect = $HeartContainer/Heart3
+@onready var garlic_4: TextureRect = $HeartContainer/Heart4
+@onready var garlic_5: TextureRect = $HeartContainer/Heart5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 
@@ -33,21 +32,21 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 #lives visually so later you can always find alternative code. Now, dw abt it.
 
 		4:
-			heart.hide()
+			garlic.hide()
 		3:
-			heart.hide()
-			heart_2.hide()
+			garlic.hide()
+			garlic_2.hide()
 		2:
-			heart.hide()
-			heart_2.hide()
-			heart_3.hide()
+			garlic.hide()
+			garlic_2.hide()
+			garlic_3.hide()
 		1:
-			heart.hide()
-			heart_2.hide()
-			heart_3.hide()
-			heart_4.hide()
+			garlic.hide()
+			garlic_2.hide()
+			garlic_3.hide()
+			garlic_4.hide()
 		0:
-			heart_container.hide() # just hides everything
+			garlic_container.hide() # just hides everything
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)
@@ -55,7 +54,6 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 func Timer(start_time: float): # making a new function for timer countdown!
 	# we want the timer to go down, and when it reaches 0 it transitions 
 	# to the next scene!
-	
 	
 	time = start_time # make the timer, which is reflected through the timer text, start at your desired number
 	

@@ -15,11 +15,11 @@ offset_bottom = 799.0
 texture = ExtResource("1_2khme")
 
 [node name="HeartContainer" type="HBoxContainer" parent="." unique_id=206122632]
-offset_left = 183.00002
-offset_top = 70.0
-offset_right = 5099.0
-offset_bottom = 1070.0
-scale = Vector2(0.4405548, 0.1712431)
+offset_left = 204.00002
+offset_top = 75.00001
+offset_right = 5120.0
+offset_bottom = 1075.0
+scale = Vector2(0.40055418, 0.1712431)
 
 [node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=180443796]
 layout_mode = 2

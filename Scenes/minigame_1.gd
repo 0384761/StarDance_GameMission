@@ -34,3 +34,17 @@ func _process(delta: float) -> void: # running every frame brochacho
 func garlic_collect() -> void: # cool function that you connect to those garlics
 	garlic_collected = garlic_collected +1
 	return
+
+func _on_heart_1_garlic_collected() -> void:
+	garlic_collected = garlic_collected +1
+	return
+
+
+func _on_heart_2_garlic_collected() -> void:
+	garlic_collected = garlic_collected +1
+	return
+
+
+func _on_heart_3_garlic_collected() -> void:
+	garlic_collected = garlic_collected +1
+	return
