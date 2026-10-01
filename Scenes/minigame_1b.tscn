@@ -3,11 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bbvkdmr3j0mmu" path="res://addons/brains.jpg" id="1_1ajrv"]
 [ext_resource type="Script" uid="uid://cvmupak1u1qta" path="res://Scenes/minigame_1.gd" id="1_bct07"]
 [ext_resource type="Texture2D" uid="uid://bd6d1xx4tsjk0" path="res://addons/brain1-removebg-preview.png" id="2_1ajrv"]
-[ext_resource type="Script" uid="uid://bleucsuydsq3g" path="res://Scenes/brain_1.gd" id="3_4jh0i"]
+[ext_resource type="Script" uid="uid://bleucsuydsq3g" path="res://Scenes/brain.gd" id="3_4jh0i"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_mxoau"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_4jh0i"]
-[ext_resource type="Script" uid="uid://cnu6kgm8mvf05" path="res://Scenes/brain_2.gd" id="7_4jh0i"]
-[ext_resource type="Script" uid="uid://cg6s28sddigbd" path="res://Scenes/brain_3.gd" id="8_bct07"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_g4bw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bct07"]
@@ -167,7 +165,7 @@ position = Vector2(-520, -298)
 [node name="Brain2" type="Node2D" parent="." unique_id=1659086549]
 process_mode = 3
 position = Vector2(305, 105)
-script = ExtResource("7_4jh0i")
+script = ExtResource("3_4jh0i")
 
 [node name="Brain2" type="TextureRect" parent="Brain2" unique_id=1294349080]
 offset_left = 436.0
@@ -187,7 +185,7 @@ shape = SubResource("CircleShape2D_67osj")
 [node name="Brain3" type="Node2D" parent="." unique_id=1801632258]
 process_mode = 3
 position = Vector2(-289, -139)
-script = ExtResource("8_bct07")
+script = ExtResource("3_4jh0i")
 
 [node name="Brain3" type="TextureRect" parent="Brain3" unique_id=27538738]
 offset_left = 436.00003
@@ -212,7 +210,7 @@ offset_right = 1127.0
 offset_bottom = 76.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
-text = "LEVEL 2/3 : PAUSE (CTRL)"
+text = "LEVEL 2/3  (PAUSE : CTRL)"
 
 [node name="HowTo" type="ColorRect" parent="." unique_id=663766118]
 visible = false

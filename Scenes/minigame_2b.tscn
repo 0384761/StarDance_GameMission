@@ -1,3 +1,129 @@
 [gd_scene format=3 uid="uid://t4gk3udjn5qs"]
 
+[ext_resource type="Script" uid="uid://vkx3u1excnbw" path="res://Scenes/minigame_2.gd" id="1_5iwsh"]
+[ext_resource type="Texture2D" uid="uid://b7dsw7l5tlbuw" path="res://addons/bloodstream.jpg" id="1_p8r3k"]
+[ext_resource type="Texture2D" uid="uid://bag1q6no0c8t4" path="res://addons/redcell4-removebg-preview.png" id="2_n2ut7"]
+[ext_resource type="Script" uid="uid://cni4ne1k7gd16" path="res://Scenes/second_buttons.gd" id="3_d1ttk"]
+[ext_resource type="Texture2D" uid="uid://2avh1lo5jeis" path="res://addons/whitecell-removebg-preview.png" id="3_nc1n5"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_d1ttk"]
+[ext_resource type="Texture2D" uid="uid://dstnbdsx6nthq" path="res://addons/bomb-removebg-preview.png" id="4_n2ut7"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="5_5iwsh"]
+[ext_resource type="Script" uid="uid://diqlkvjffocsb" path="res://Scenes/bad_button.gd" id="6_5iwsh"]
+[ext_resource type="Texture2D" uid="uid://dst2vfvtav6" path="res://addons/explosion.png" id="10_1peus"]
+
 [node name="minigame_2b" type="Node2D" unique_id=1266439987]
+script = ExtResource("1_5iwsh")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1966102233]
+offset_left = -38.944412
+offset_top = 716.7183
+offset_right = 724.22876
+offset_bottom = 1954.917
+rotation = -1.5703943
+texture = ExtResource("1_p8r3k")
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=950744406]
+offset_left = 481.0
+offset_top = 530.0
+offset_right = 994.0
+offset_bottom = 824.0
+rotation = -0.4981421
+scale = Vector2(0.5600006, 0.55999935)
+texture_normal = ExtResource("2_n2ut7")
+script = ExtResource("3_d1ttk")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=1356474121]
+offset_left = 950.0
+offset_top = 384.00003
+offset_right = 1287.0
+offset_bottom = 734.00006
+rotation = 0.26520225
+scale = Vector2(0.5585794, 0.6091796)
+texture_normal = ExtResource("3_nc1n5")
+script = ExtResource("3_d1ttk")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=588293023]
+offset_left = 567.0
+offset_top = 57.999985
+offset_right = 904.0
+offset_bottom = 408.0
+rotation = 0.26520225
+scale = Vector2(0.5585794, 0.6091796)
+texture_normal = ExtResource("3_nc1n5")
+script = ExtResource("3_d1ttk")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1896994321]
+offset_left = 354.0
+offset_top = 491.00003
+offset_right = 867.0
+offset_bottom = 785.0
+rotation = -3.3875873
+scale = Vector2(0.5600006, 0.55999935)
+texture_normal = ExtResource("2_n2ut7")
+script = ExtResource("3_d1ttk")
+
+[node name="Button_5" type="TextureButton" parent="." unique_id=1920719667]
+offset_left = 829.99994
+offset_top = 151.0
+offset_right = 1343.0
+offset_bottom = 445.0
+rotation = 0.17569336
+scale = Vector2(0.5600006, 0.55999935)
+texture_normal = ExtResource("2_n2ut7")
+script = ExtResource("3_d1ttk")
+
+[node name="Button_6" type="TextureButton" parent="." unique_id=863566155]
+offset_left = 181.0
+offset_top = 76.00001
+offset_right = 690.0
+offset_bottom = 415.0
+rotation = 0.17569336
+scale = Vector2(0.5600006, 0.55999935)
+texture_normal = ExtResource("4_n2ut7")
+script = ExtResource("6_5iwsh")
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_d1ttk")]
+position = Vector2(-519, -302)
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=292632201]
+offset_left = 762.0
+offset_top = 23.0
+offset_right = 1128.0
+offset_bottom = 71.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 30
+text = "LEVEL 2/2  (PAUSE : CTRL)"
+
+[node name="HowTo" type="ColorRect" parent="." unique_id=1192576337]
+visible = false
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1150.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=755547896]
+visible = false
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1162.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("5_5iwsh")]
+position = Vector2(4, 6)
+
+[node name="Explosion" type="TextureRect" parent="." unique_id=1973694314]
+visible = false
+offset_left = -38.0
+offset_top = -108.0
+offset_right = 1276.0
+offset_bottom = 800.0
+texture = ExtResource("10_1peus")
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="Button_5" to="Button_5" method="_on_pressed"]
+[connection signal="pressed" from="Button_6" to="Button_6" method="_on_pressed"]

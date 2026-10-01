@@ -15,6 +15,13 @@ offset_right = 1171.0
 offset_bottom = 731.0
 texture = ExtResource("2_l88kf")
 
+[node name="Tint" type="ColorRect" parent="." unique_id=706630265]
+offset_left = -24.0
+offset_top = -25.0
+offset_right = 1221.0
+offset_bottom = 703.0
+color = Color(0, 0, 0, 0.64705884)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=795014662]
 offset_left = 34.0
 offset_top = -105.0
@@ -52,31 +59,21 @@ layout_mode = 2
 texture = ExtResource("3_6j6o5")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=534886812]
-offset_left = 375.0
-offset_top = 326.0
-offset_right = 783.0
-offset_bottom = 448.0
+offset_left = 264.0
+offset_top = 408.0
+offset_right = 890.0
+offset_bottom = 538.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 90
-text = "GAME: #"
+text = "MINIGAME: #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=1624834427]
-offset_left = 671.0
-offset_top = 439.0
-offset_right = 802.0
-offset_bottom = 515.0
+offset_left = 531.0
+offset_top = 528.0
+offset_right = 662.0
+offset_bottom = 604.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/normal_font_size = 40
 text = "0.0"
-
-[node name="Start" type="RichTextLabel" parent="." unique_id=2026766664]
-offset_left = 359.0
-offset_top = 435.0
-offset_right = 688.0
-offset_bottom = 530.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 60
-text = "Starting in "

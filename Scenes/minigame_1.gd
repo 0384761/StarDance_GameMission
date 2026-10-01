@@ -26,9 +26,10 @@ func _process(delta: float) -> void:
 	if heart_collected == 3: 
 		heart_collected = 0
 		get_tree().change_scene_to_file("res://Scenes/minigame_1b.tscn")
+		
 	if brains_collected == 3:
-
 		get_tree().change_scene_to_file("res://Scenes/minigame_1c.tscn")
+		
 	if bone_collected == 3:
 		bone_collected = 0
 		get_tree().change_scene_to_file("res://Scenes/timer_scene.tscn")

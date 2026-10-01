@@ -3,11 +3,9 @@
 [ext_resource type="Script" uid="uid://cvmupak1u1qta" path="res://Scenes/minigame_1.gd" id="1_v12ww"]
 [ext_resource type="Texture2D" uid="uid://bmxey8rt02qf8" path="res://addons/bones1.jpg" id="2_2xg6d"]
 [ext_resource type="Texture2D" uid="uid://b4w1moeseci0i" path="res://addons/femur1-removebg-preview.png" id="2_dwqar"]
-[ext_resource type="Script" uid="uid://bkms7tv5wfklv" path="res://Scenes/bone_1.gd" id="3_3hq7a"]
+[ext_resource type="Script" uid="uid://bkms7tv5wfklv" path="res://Scenes/bone.gd" id="3_3hq7a"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_yh7p2"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_3hq7a"]
-[ext_resource type="Script" uid="uid://cy2wvdmnnvvn3" path="res://Scenes/bone_2.gd" id="7_3hq7a"]
-[ext_resource type="Script" uid="uid://ccvm08wxw145a" path="res://Scenes/bone_3.gd" id="8_v12ww"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_hydyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v12ww"]
@@ -172,7 +170,7 @@ position = Vector2(-520, -298)
 
 [node name="Bone2" type="Node2D" parent="." unique_id=1825106816]
 position = Vector2(305, 105)
-script = ExtResource("7_3hq7a")
+script = ExtResource("3_3hq7a")
 
 [node name="Bone2" type="TextureRect" parent="Bone2" unique_id=532312554]
 offset_left = 436.0
@@ -192,7 +190,7 @@ shape = SubResource("RectangleShape2D_2xg6d")
 
 [node name="Bone3" type="Node2D" parent="." unique_id=1114928077]
 position = Vector2(-289, -139)
-script = ExtResource("8_v12ww")
+script = ExtResource("3_3hq7a")
 
 [node name="Bone3" type="TextureRect" parent="Bone3" unique_id=1825484252]
 offset_left = 436.00003
@@ -218,7 +216,7 @@ offset_right = 1152.0
 offset_bottom = 74.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
-text = "LEVEL 3/3 : PAUSE (CTRL)"
+text = "LEVEL 3/3  (PAUSE: CTRL)"
 
 [node name="HowTo" type="ColorRect" parent="." unique_id=459795266]
 visible = false

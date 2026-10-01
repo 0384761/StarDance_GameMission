@@ -3,11 +3,9 @@
 [ext_resource type="Script" uid="uid://cvmupak1u1qta" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://8a5yip37c11e" path="res://addons/hearts.jpg" id="2_jmcek"]
-[ext_resource type="Script" uid="uid://ly2b1legj7jo" path="res://Scenes/heart_1.gd" id="2_o6yob"]
+[ext_resource type="Script" uid="uid://ly2b1legj7jo" path="res://Scenes/heart.gd" id="2_o6yob"]
 [ext_resource type="Texture2D" uid="uid://tmtewf1kw146" path="res://addons/themillionthheart-removebg-preview.png" id="4_jmcek"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="6_0uv5o"]
-[ext_resource type="Script" uid="uid://bcjnlvxu45n7q" path="res://Scenes/heart_2.gd" id="7_ojqsy"]
-[ext_resource type="Script" uid="uid://5w82r47gk7kl" path="res://Scenes/heart_3.gd" id="8_jmcek"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_ne1wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d56g"]
@@ -165,7 +163,7 @@ position = Vector2(-520, -298)
 
 [node name="Heart2" type="Node2D" parent="." unique_id=2066281530]
 position = Vector2(305, 105)
-script = ExtResource("7_ojqsy")
+script = ExtResource("2_o6yob")
 
 [node name="Heart1" type="TextureRect" parent="Heart2" unique_id=382056765]
 offset_left = 433.00006
@@ -185,7 +183,7 @@ shape = SubResource("CircleShape2D_6d56g")
 
 [node name="Heart3" type="Node2D" parent="." unique_id=956563548]
 position = Vector2(-289, -139)
-script = ExtResource("8_jmcek")
+script = ExtResource("2_o6yob")
 
 [node name="Heart1" type="TextureRect" parent="Heart3" unique_id=1425221241]
 offset_left = 434.00003
@@ -210,7 +208,7 @@ offset_right = 1188.0
 offset_bottom = 70.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
-text = "LEVEL 1/3 : PAUSE (CTRL)"
+text = "LEVEL 1/3  (PAUSE : CTRL)"
 
 [node name="HowTo" type="ColorRect" parent="." unique_id=355268430]
 offset_left = -11.0
@@ -227,10 +225,9 @@ offset_right = 1122.0
 offset_bottom = 582.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 60
-text = "HOW TO PLAY (GAME 1):
+text = "HOW TO PLAY (Minigame 1):
 
-Collect all the items before the time runs out! There are three levels to this minigame, complete all of them to progress!
-"
+Collect all the items before the time runs out! You need to complete the Cardio, Neuro and Ortho levels to progress!"
 
 [node name="OuterMenu" type="ColorRect" parent="." unique_id=1030763116]
 visible = false

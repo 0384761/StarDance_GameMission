@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://vkx3u1excnbw" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
 [ext_resource type="Texture2D" uid="uid://bqjlv5x2wvnd3" path="res://addons/optionalscalpel.png" id="2_l4g8r"]
 [ext_resource type="Texture2D" uid="uid://dqvb3hgwd3pne" path="res://addons/greys5.jpg" id="2_wu6l1"]
-[ext_resource type="Script" uid="uid://cw3l556bio4ui" path="res://Scenes/button_1.gd" id="3_dfb65"]
+[ext_resource type="Script" uid="uid://cw3l556bio4ui" path="res://Scenes/first_buttons.gd" id="3_dfb65"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_dfb65"]
-[ext_resource type="Script" uid="uid://cni4ne1k7gd16" path="res://Scenes/button_2.gd" id="6_mmgun"]
-[ext_resource type="Script" uid="uid://nvxpmtjyqd0e" path="res://Scenes/button_3.gd" id="7_h684j"]
-[ext_resource type="Script" uid="uid://nfwspwrxtrwu" path="res://Scenes/button_4.gd" id="8_wu6l1"]
+[ext_resource type="Texture2D" uid="uid://ddtss4j7vj78j" path="res://addons/forceps1-removebg-preview.png" id="5_wu6l1"]
+[ext_resource type="Texture2D" uid="uid://dstnbdsx6nthq" path="res://addons/bomb-removebg-preview.png" id="6_cqly6"]
+[ext_resource type="Script" uid="uid://diqlkvjffocsb" path="res://Scenes/bad_button.gd" id="7_1ja6b"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_cqly6"]
+[ext_resource type="Texture2D" uid="uid://dst2vfvtav6" path="res://addons/explosion.png" id="10_1ja6b"]
 
 [node name="minigame_2" type="Node2D" unique_id=164351163]
 script = ExtResource("1_rfxq2")
@@ -21,53 +23,71 @@ texture = ExtResource("2_wu6l1")
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=1429259539]
 custom_maximum_size = Vector2(450, 35)
-offset_left = 144.00002
-offset_top = 279.0
-offset_right = 594.0
-offset_bottom = 314.0
+offset_left = 100.000015
+offset_top = 251.0
+offset_right = 550.0
+offset_bottom = 286.0
 rotation = -0.4981421
 scale = Vector2(0.5600006, 0.55999935)
 texture_normal = ExtResource("2_l4g8r")
 script = ExtResource("3_dfb65")
 
 [node name="Button_2" type="TextureButton" parent="." unique_id=322494453]
-custom_maximum_size = Vector2(450, 35)
-offset_left = 328.0
-offset_top = 459.0
-offset_right = 778.0
-offset_bottom = 494.0
+custom_maximum_size = Vector2(600, 400)
+offset_left = 199.0
+offset_top = 468.0
+offset_right = 794.0
+offset_bottom = 529.0
 rotation = 0.26520225
 scale = Vector2(0.5585794, 0.6091796)
-texture_normal = ExtResource("2_l4g8r")
-script = ExtResource("6_mmgun")
+texture_normal = ExtResource("5_wu6l1")
+script = ExtResource("3_dfb65")
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=122260332]
 custom_maximum_size = Vector2(450, 35)
-offset_left = 585.0
-offset_top = 271.0
-offset_right = 1035.0
-offset_bottom = 306.0
+offset_left = 811.00006
+offset_top = 489.00006
+offset_right = 1261.0
+offset_bottom = 524.00006
 rotation = -0.23205073
 scale = Vector2(0.5585794, 0.6091796)
 texture_normal = ExtResource("2_l4g8r")
-script = ExtResource("7_h684j")
+script = ExtResource("3_dfb65")
 
-[node name="Button_4" type="TextureButton" parent="." unique_id=927647124]
-custom_maximum_size = Vector2(450, 35)
-offset_left = 1080.0
-offset_top = 364.0
-offset_right = 1530.0
-offset_bottom = 399.0
+[node name="Button_4" type="TextureButton" parent="." unique_id=1812023384]
+custom_maximum_size = Vector2(600, 400)
+offset_left = 976.99994
+offset_top = 151.99997
+offset_right = 1572.0
+offset_bottom = 212.99997
 rotation = 2.3847322
 scale = Vector2(0.5585794, 0.6091796)
-texture_normal = ExtResource("2_l4g8r")
-script = ExtResource("8_wu6l1")
+texture_normal = ExtResource("5_wu6l1")
+script = ExtResource("3_dfb65")
+
+[node name="Button_6" type="TextureButton" parent="." unique_id=56707738]
+offset_left = 347.00003
+offset_top = 223.00003
+offset_right = 856.0
+offset_bottom = 562.0
+rotation = 0.17569336
+scale = Vector2(0.5600006, 0.55999935)
+texture_normal = ExtResource("6_cqly6")
+script = ExtResource("7_1ja6b")
 
 [node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_dfb65")]
 position = Vector2(-519, -302)
 
+[node name="Level" type="RichTextLabel" parent="." unique_id=761146692]
+offset_left = 762.0
+offset_top = 23.0
+offset_right = 1128.0
+offset_bottom = 71.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 30
+text = "LEVEL 1/2  (PAUSE : CTRL)"
+
 [node name="HowTo" type="ColorRect" parent="." unique_id=284613155]
-visible = false
 offset_left = -1.0
 offset_top = -1.0
 offset_right = 1150.0
@@ -82,21 +102,32 @@ offset_right = 1098.0
 offset_bottom = 582.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 60
-text = "HOW TO PLAY (Lvl 2):
+text = "HOW TO PLAY (Minigame 2):
 
 Pick up (click on) all the items before the time runs out! Watch out for trick items- these are dangerous! 
 "
 
-[node name="Level" type="RichTextLabel" parent="." unique_id=761146692]
-offset_left = 762.0
-offset_top = 23.0
-offset_right = 1128.0
-offset_bottom = 71.0
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 30
-text = "LEVEL 1/3 : PAUSE (CTRL)"
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=2090108306]
+visible = false
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1162.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("9_cqly6")]
+position = Vector2(4, 6)
+
+[node name="Explosion" type="TextureRect" parent="." unique_id=2013712367]
+visible = false
+offset_left = -38.0
+offset_top = -108.0
+offset_right = 1276.0
+offset_bottom = 800.0
+texture = ExtResource("10_1ja6b")
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
 [connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="Button_6" to="Button_6" method="_on_pressed"]
