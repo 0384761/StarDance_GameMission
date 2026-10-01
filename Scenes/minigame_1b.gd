@@ -1,20 +1,12 @@
 extends Node2D
 
-
-@onready var howTo: ColorRect = $HowTo
 @onready var themed_timer: Node2D = $Themed_Timer 
 # ^^^ You dragged this in the scene by the way 
 
-var heart_collected = 0 # just keeping track of garlic collected
+var brains_collected = 0 # just keeping track of garlic collected
 var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
-
-		#Below you can see that I have a function that I named. I grab a 
-		#function from it that was created in it's script and use `await` to 
-		# tell the script to wait for a signal, or for when a function finshes
-	await get_tree().create_timer(5).timeout
-	howTo.hide()
 
 	await themed_timer.Timer(10.0) #accessing a function from this node
 	#after this is compeleted...
@@ -22,8 +14,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void: # running every frame brochacho
 	
-	if heart_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
-		get_tree().change_scene_to_file("res://Scenes/minigame_1b.tscn")
+	if brains_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
+		get_tree().change_scene_to_file("res://Scenes/minigame_1c.tscn")
 	
 	if timer_end: # if the timer does end...
 		Global.minigames_done -=1 #go back a minigame
@@ -31,6 +23,6 @@ func _process(delta: float) -> void: # running every frame brochacho
 		get_tree().change_scene_to_file("res://Scenes/timer_scene.tscn") # back to intermission
 		
 
-func hearts_collect() -> void: # cool function that you connect to those garlics
-	heart_collected = heart_collected +1
+func brain_collect() -> void: # cool function that you connect to those garlics
+	brains_collected = brains_collected +1
 	return

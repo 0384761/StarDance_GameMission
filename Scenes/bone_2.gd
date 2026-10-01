@@ -5,12 +5,12 @@ extends Node2D
 @onready var player_area = $"../Player/Area2D"
 
 # make a signal
-signal heart_collected
+signal bone_collected
 
 func _process(delta: float) -> void: # this runs EVERY FRAME! 
 	
 	if player_area.overlaps_area(self_area): # checks if overlapping
 		if self.visible:
-			emit_signal("heart_collected") #gnal broadcast
+			emit_signal("bone_collected") #gnal broadcast
 			self.hide() #removed from player sight; collected
 		

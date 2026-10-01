@@ -1,25 +1,35 @@
 [gd_scene format=3 uid="uid://ba6rbbbx6fc07"]
 
-[ext_resource type="Texture2D" uid="uid://bcvqqh5hkptry" path="res://addons/greys2.jpg" id="1_2khme"]
 [ext_resource type="Script" uid="uid://dgfca3q5ft5d1" path="res://Scenes/timer_scene.gd" id="1_6j6o5"]
+[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="2_l88kf"]
 [ext_resource type="Texture2D" uid="uid://tmtewf1kw146" path="res://addons/themillionthheart-removebg-preview.png" id="3_6j6o5"]
+[ext_resource type="Texture2D" uid="uid://cso144ayj178u" path="res://addons/tray1-removebg-preview.png" id="3_aoy4m"]
 
 [node name="timer_scene" type="Node2D" unique_id=1018746441]
 script = ExtResource("1_6j6o5")
 
 [node name="Background" type="TextureRect" parent="." unique_id=812576605]
-offset_left = -22.0
-offset_top = -101.0
-offset_right = 1178.0
-offset_bottom = 799.0
-texture = ExtResource("1_2khme")
+offset_left = -29.0
+offset_top = -169.0
+offset_right = 1171.0
+offset_bottom = 731.0
+texture = ExtResource("2_l88kf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=795014662]
+offset_left = 34.0
+offset_top = -105.0
+offset_right = 1204.0
+offset_bottom = 637.0
+rotation = -0.0014458238
+scale = Vector2(0.9199994, 0.79982543)
+texture = ExtResource("3_aoy4m")
 
 [node name="HeartContainer" type="HBoxContainer" parent="." unique_id=206122632]
-offset_left = 78.000015
-offset_top = 101.00001
-offset_right = 4994.0
-offset_bottom = 1101.0
-scale = Vector2(0.40055418, 0.1712431)
+offset_left = 121.00001
+offset_top = 129.0
+offset_right = 2637.0
+offset_bottom = 1217.3787
+scale = Vector2(0.3579529, 0.13873848)
 
 [node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=180443796]
 layout_mode = 2
@@ -52,21 +62,21 @@ theme_override_font_sizes/normal_font_size = 90
 text = "Level #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=1624834427]
-offset_left = 662.0
-offset_top = 435.0
-offset_right = 793.0
-offset_bottom = 511.0
+offset_left = 671.0
+offset_top = 439.0
+offset_right = 802.0
+offset_bottom = 515.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 60
 text = "0.0"
 
 [node name="Start" type="RichTextLabel" parent="." unique_id=2026766664]
-offset_left = 371.0
-offset_top = 432.0
-offset_right = 700.0
-offset_bottom = 527.0
+offset_left = 359.0
+offset_top = 435.0
+offset_right = 688.0
+offset_bottom = 530.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 60
-text = "Starts in:"
+text = "Starting in "

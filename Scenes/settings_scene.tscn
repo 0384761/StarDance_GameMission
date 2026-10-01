@@ -12,10 +12,24 @@ texture = ExtResource("1_cmf5w")
 [node name="Title" type="RichTextLabel" parent="Background" unique_id=651720438]
 clip_contents = false
 layout_mode = 0
-offset_left = 376.0
-offset_top = 152.0
-offset_right = 1082.0
-offset_bottom = 285.0
+offset_left = 406.0
+offset_top = 128.0
+offset_right = 770.0
+offset_bottom = 261.0
 theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 90
 text = "Settings"
+
+[node name="Options" type="RichTextLabel" parent="Background/Title" unique_id=712845326]
+layout_mode = 0
+offset_left = -23.0
+offset_top = 183.0
+offset_right = 491.0
+offset_bottom = 444.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "- Music slider
+- music picker
+- global theme 
+"

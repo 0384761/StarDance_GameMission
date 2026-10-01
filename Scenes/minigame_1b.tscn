@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://cm6bvgrcbcprn"]
+
+[ext_resource type="Texture2D" uid="uid://bbvkdmr3j0mmu" path="res://addons/brains.jpg" id="1_1ajrv"]
+[ext_resource type="Script" uid="uid://c4mm1uin46n75" path="res://Scenes/minigame_1b.gd" id="1_pxsb7"]
+[ext_resource type="Texture2D" uid="uid://bd6d1xx4tsjk0" path="res://addons/brain1-removebg-preview.png" id="2_1ajrv"]
+[ext_resource type="Script" uid="uid://bleucsuydsq3g" path="res://Scenes/brain_1.gd" id="3_4jh0i"]
+[ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_mxoau"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_4jh0i"]
+[ext_resource type="Script" uid="uid://cnu6kgm8mvf05" path="res://Scenes/brain_2.gd" id="7_4jh0i"]
+[ext_resource type="Script" uid="uid://cg6s28sddigbd" path="res://Scenes/brain_3.gd" id="8_bct07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bct07"]
+size = Vector2(1162, 41.5)
+
+[sub_resource type="Animation" id="Animation_o6yob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.0517578e-05, -3.0517578e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_5txvl"]
+resource_name = "floating"
+length = 2.0333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1, 2.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-3.0517578e-05, -3.0517578e-05), Vector2(0, -12), Vector2(-3.0517578e-05, -3.0517578e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4bw1"]
+_data = {
+&"RESET": SubResource("Animation_o6yob"),
+&"floating": SubResource("Animation_5txvl")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_67osj"]
+radius = 14.044941
+
+[node name="minigame_1b" type="Node2D" unique_id=737195025]
+script = ExtResource("1_pxsb7")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1104706131]
+repeat_size = Vector2(1160, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=1432999313]
+offset_right = 1200.0
+offset_bottom = 675.0
+texture = ExtResource("1_1ajrv")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=148994934]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=663167006]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0, 0.3137255, 0.53333336, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1896404223]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_bct07")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1725281304]
+position = Vector2(633, 283)
+scale = Vector2(0.28000152, 0.39257374)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1462974492]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0, 0.3137255, 0.53333336, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=2101954861]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_bct07")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1390046143]
+position = Vector2(343, 168.00002)
+scale = Vector2(0.28000152, 0.39257374)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=793637717]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0, 0.3137255, 0.53333336, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=713449937]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_bct07")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=1494847126]
+position = Vector2(43.000004, 43)
+scale = Vector2(0.28000152, 0.39257374)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=920912821]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0, 0.3137255, 0.53333336, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=303729517]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_bct07")
+
+[node name="Brain1" type="Node2D" parent="." unique_id=948572896]
+position = Vector2(-3.0517578e-05, -3.0517578e-05)
+scale = Vector2(1, 1.0000001)
+script = ExtResource("3_4jh0i")
+
+[node name="Brain1" type="TextureRect" parent="Brain1" unique_id=864206312]
+offset_left = 436.00003
+offset_top = 299.0
+offset_right = 1051.0
+offset_bottom = 799.0
+scale = Vector2(0.19516133, 0.18200773)
+texture = ExtResource("2_1ajrv")
+
+[node name="animation" type="AnimationPlayer" parent="Brain1" unique_id=294641767]
+root_node = NodePath("../Brain1")
+libraries/ = SubResource("AnimationLibrary_g4bw1")
+
+[node name="Area2D" type="Area2D" parent="Brain1" unique_id=571275965]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Brain1/Area2D" unique_id=538735817]
+position = Vector2(496.00003, 345)
+scale = Vector2(3.5599988, 3.4114788)
+shape = SubResource("CircleShape2D_67osj")
+
+[node name="Player" parent="." unique_id=986568745 instance=ExtResource("3_mxoau")]
+position = Vector2(940, 399.4299)
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_4jh0i")]
+position = Vector2(-520, -298)
+
+[node name="Brain2" type="Node2D" parent="." unique_id=1659086549]
+position = Vector2(305, 105)
+script = ExtResource("7_4jh0i")
+
+[node name="Brain2" type="TextureRect" parent="Brain2" unique_id=1294349080]
+offset_left = 436.0
+offset_top = 299.0
+offset_right = 1051.0
+offset_bottom = 799.0
+scale = Vector2(0.19516133, 0.18200773)
+texture = ExtResource("2_1ajrv")
+
+[node name="Area2D" type="Area2D" parent="Brain2" unique_id=647259259]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Brain2/Area2D" unique_id=1603325625]
+position = Vector2(496.00003, 345)
+scale = Vector2(3.5599988, 3.4114788)
+shape = SubResource("CircleShape2D_67osj")
+
+[node name="Brain3" type="Node2D" parent="." unique_id=1801632258]
+position = Vector2(-289, -139)
+script = ExtResource("8_bct07")
+
+[node name="Brain3" type="TextureRect" parent="Brain3" unique_id=27538738]
+offset_left = 436.00003
+offset_top = 299.0
+offset_right = 1051.0
+offset_bottom = 799.0
+scale = Vector2(0.19516133, 0.18200773)
+texture = ExtResource("2_1ajrv")
+
+[node name="Area2D" type="Area2D" parent="Brain3" unique_id=173204114]
+position = Vector2(4, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brain3/Area2D" unique_id=915979081]
+position = Vector2(493.00003, 327)
+scale = Vector2(3.5599988, 3.4114788)
+shape = SubResource("CircleShape2D_67osj")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1929414213]
+offset_left = 817.0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 90.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "NEURO 2/3"
+
+[connection signal="brains_collected" from="Brain1" to="." method="brain_collect"]
+[connection signal="brains_collected" from="Brain2" to="." method="brain_collect"]
+[connection signal="brains_collected" from="Brain3" to="." method="brain_collect"]

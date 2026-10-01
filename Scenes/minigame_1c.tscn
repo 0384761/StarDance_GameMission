@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://cyta7qtbdyy13"]
+
+[ext_resource type="Script" uid="uid://c71gsclslw2dq" path="res://Scenes/minigame_1c.gd" id="1_2xg6d"]
+[ext_resource type="Texture2D" uid="uid://bmxey8rt02qf8" path="res://addons/bones1.jpg" id="2_2xg6d"]
+[ext_resource type="Texture2D" uid="uid://b4w1moeseci0i" path="res://addons/femur1-removebg-preview.png" id="2_dwqar"]
+[ext_resource type="Script" uid="uid://bkms7tv5wfklv" path="res://Scenes/bone_1.gd" id="3_3hq7a"]
+[ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_yh7p2"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_3hq7a"]
+[ext_resource type="Script" uid="uid://cy2wvdmnnvvn3" path="res://Scenes/bone_2.gd" id="7_3hq7a"]
+[ext_resource type="Script" uid="uid://ccvm08wxw145a" path="res://Scenes/bone_3.gd" id="8_v12ww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v12ww"]
+size = Vector2(1162, 41.5)
+
+[sub_resource type="Animation" id="Animation_o6yob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.0517578e-05, -3.0517578e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_5txvl"]
+resource_name = "floating"
+length = 2.0333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1, 2.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-3.0517578e-05, -3.0517578e-05), Vector2(0, -12), Vector2(-3.0517578e-05, -3.0517578e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hydyd"]
+_data = {
+&"RESET": SubResource("Animation_o6yob"),
+&"floating": SubResource("Animation_5txvl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36m6t"]
+size = Vector2(20, 27.840508)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xg6d"]
+size = Vector2(7.3362427, 28.033003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh7p2"]
+size = Vector2(5.934944, 27.943378)
+
+[node name="minigame_1c" type="Node2D" unique_id=1987408886]
+script = ExtResource("1_2xg6d")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=33455970]
+repeat_size = Vector2(1160, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=914201023]
+offset_right = 1163.0
+offset_bottom = 733.0
+texture = ExtResource("2_2xg6d")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=713842677]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=169744900]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0.02745098, 0.08627451, 0.16862746, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=2113630808]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_v12ww")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=443345593]
+position = Vector2(633, 283)
+scale = Vector2(0.28000152, 0.39257374)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=783031405]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0.02745098, 0.08627451, 0.16862746, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1864683726]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_v12ww")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=118531367]
+position = Vector2(343, 168.00002)
+scale = Vector2(0.28000152, 0.39257374)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1031140734]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0.02745098, 0.08627451, 0.16862746, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1152912985]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_v12ww")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=1289527000]
+position = Vector2(43.000004, 43)
+scale = Vector2(0.28000152, 0.39257374)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1762396884]
+offset_top = 606.0
+offset_right = 1160.0
+offset_bottom = 649.0
+scale = Vector2(1, 1.64)
+color = Color(0.02745098, 0.08627451, 0.16862746, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1766547430]
+visible = false
+position = Vector2(577, 641)
+scale = Vector2(1, 1.64)
+shape = SubResource("RectangleShape2D_v12ww")
+
+[node name="Bone1" type="Node2D" parent="." unique_id=1396283043]
+position = Vector2(-3.0517578e-05, -3.0517578e-05)
+scale = Vector2(1, 1.0000001)
+script = ExtResource("3_3hq7a")
+
+[node name="Bone1" type="TextureRect" parent="Bone1" unique_id=150863323]
+offset_left = 436.00003
+offset_top = 299.0
+offset_right = 1051.0
+offset_bottom = 799.0
+scale = Vector2(0.19516133, 0.18200773)
+texture = ExtResource("2_dwqar")
+
+[node name="animation" type="AnimationPlayer" parent="Bone1" unique_id=1339822862]
+root_node = NodePath("../Bone1")
+libraries/ = SubResource("AnimationLibrary_hydyd")
+
+[node name="Area2D" type="Area2D" parent="Bone1" unique_id=1775191548]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bone1/Area2D" unique_id=1533421509]
+position = Vector2(501.0001, 344.00003)
+rotation = 0.62164533
+scale = Vector2(1.1142418, 3.4114788)
+shape = SubResource("RectangleShape2D_36m6t")
+
+[node name="Player" parent="." unique_id=986568745 instance=ExtResource("3_yh7p2")]
+position = Vector2(940, 399.4299)
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("4_3hq7a")]
+position = Vector2(-520, -298)
+
+[node name="Bone2" type="Node2D" parent="." unique_id=1825106816]
+position = Vector2(305, 105)
+script = ExtResource("7_3hq7a")
+
+[node name="Bone2" type="TextureRect" parent="Bone2" unique_id=532312554]
+offset_left = 436.0
+offset_top = 299.0
+offset_right = 1051.0
+offset_bottom = 799.0
+scale = Vector2(0.19516133, 0.18200773)
+texture = ExtResource("2_dwqar")
+
+[node name="Area2D" type="Area2D" parent="Bone2" unique_id=542246551]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bone2/Area2D" unique_id=345813867]
+position = Vector2(501, 343.00003)
+rotation = 0.58198994
+scale = Vector2(3.5599988, 3.411479)
+shape = SubResource("RectangleShape2D_2xg6d")
+
+[node name="Bone3" type="Node2D" parent="." unique_id=1114928077]
+position = Vector2(-289, -139)
+script = ExtResource("8_v12ww")
+
+[node name="Bone3" type="TextureRect" parent="Bone3" unique_id=1825484252]
+offset_left = 436.00003
+offset_top = 299.0
+offset_right = 1051.0
+offset_bottom = 799.0
+scale = Vector2(0.19516133, 0.18200773)
+texture = ExtResource("2_dwqar")
+
+[node name="Area2D" type="Area2D" parent="Bone3" unique_id=1403571261]
+position = Vector2(4, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bone3/Area2D" unique_id=409772726]
+position = Vector2(495.92612, 323.22882)
+rotation = 0.6073908
+scale = Vector2(3.5599988, 3.4114788)
+shape = SubResource("RectangleShape2D_yh7p2")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=475416232]
+offset_left = 817.0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 90.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "ORTHO 3/3"
+
+[connection signal="bone_collected" from="Bone1" to="." method="bones_collect"]
+[connection signal="bone_collected" from="Bone2" to="." method="bones_collect"]
+[connection signal="bone_collected" from="Bone3" to="." method="bones_collect"]

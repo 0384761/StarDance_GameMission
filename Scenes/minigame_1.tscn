@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bwg35ieaagpbb"]
 
 [ext_resource type="Script" uid="uid://cvmupak1u1qta" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
-[ext_resource type="Texture2D" uid="uid://bbvkdmr3j0mmu" path="res://addons/brains.jpg" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="2_11mgy"]
+[ext_resource type="Texture2D" uid="uid://8a5yip37c11e" path="res://addons/hearts.jpg" id="2_jmcek"]
 [ext_resource type="Script" uid="uid://ly2b1legj7jo" path="res://Scenes/heart_1.gd" id="2_o6yob"]
 [ext_resource type="Texture2D" uid="uid://tmtewf1kw146" path="res://addons/themillionthheart-removebg-preview.png" id="4_jmcek"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="6_0uv5o"]
@@ -56,13 +56,13 @@ _data = {
 script = ExtResource("1_5txvl")
 
 [node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=356672506]
-repeat_size = Vector2(1160, 0)
+repeat_size = Vector2(1190, 0)
 autoscroll = Vector2(100, 0)
 
 [node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=48123873]
 offset_right = 1200.0
 offset_bottom = 675.0
-texture = ExtResource("1_enoba")
+texture = ExtResource("2_jmcek")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=1276197703]
 
@@ -71,9 +71,10 @@ offset_top = 606.0
 offset_right = 1160.0
 offset_bottom = 649.0
 scale = Vector2(1, 1.64)
-color = Color(0.85490197, 0.9490196, 1, 1)
+color = Color(0.3882353, 0.46666667, 0.6313726, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=2064107057]
+visible = false
 position = Vector2(577, 641)
 scale = Vector2(1, 1.64)
 shape = SubResource("RectangleShape2D_6d56g")
@@ -87,9 +88,10 @@ offset_top = 606.0
 offset_right = 1160.0
 offset_bottom = 649.0
 scale = Vector2(1, 1.64)
-color = Color(0.85490197, 0.9490196, 1, 1)
+color = Color(0.3882353, 0.46666667, 0.6313726, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1872289363]
+visible = false
 position = Vector2(577, 641)
 scale = Vector2(1, 1.64)
 shape = SubResource("RectangleShape2D_6d56g")
@@ -103,9 +105,10 @@ offset_top = 606.0
 offset_right = 1160.0
 offset_bottom = 649.0
 scale = Vector2(1, 1.64)
-color = Color(0.85490197, 0.9490196, 1, 1)
+color = Color(0.3882353, 0.46666667, 0.6313726, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=412638112]
+visible = false
 position = Vector2(577, 641)
 scale = Vector2(1, 1.64)
 shape = SubResource("RectangleShape2D_6d56g")
@@ -119,9 +122,10 @@ offset_top = 606.0
 offset_right = 1160.0
 offset_bottom = 649.0
 scale = Vector2(1, 1.64)
-color = Color(0.85490197, 0.9490196, 1, 1)
+color = Color(0.3882353, 0.46666667, 0.6313726, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=829511550]
+visible = false
 position = Vector2(577, 641)
 scale = Vector2(1, 1.64)
 shape = SubResource("RectangleShape2D_6d56g")
@@ -146,6 +150,7 @@ libraries/ = SubResource("AnimationLibrary_0uv5o")
 [node name="Area2D" type="Area2D" parent="Heart1" unique_id=1651253621]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart1/Area2D" unique_id=1420007113]
+visible = false
 position = Vector2(495.00003, 328.73923)
 scale = Vector2(3.5599988, 5.520001)
 shape = SubResource("CircleShape2D_6d56g")
@@ -171,6 +176,7 @@ texture = ExtResource("4_jmcek")
 [node name="Area2D" type="Area2D" parent="Heart2" unique_id=629511182]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart2/Area2D" unique_id=2059112871]
+visible = false
 position = Vector2(495.00003, 328.73923)
 scale = Vector2(3.5599988, 5.520001)
 shape = SubResource("CircleShape2D_6d56g")
@@ -190,11 +196,40 @@ texture = ExtResource("4_jmcek")
 [node name="Area2D" type="Area2D" parent="Heart3" unique_id=470012900]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart3/Area2D" unique_id=837365471]
+visible = false
 position = Vector2(495.00003, 328.73923)
 scale = Vector2(3.5599988, 5.520001)
 shape = SubResource("CircleShape2D_6d56g")
 
-[connection signal="garlic_collected" from="Heart1" to="." method="_on_heart_1_garlic_collected"]
-[connection signal="garlic_collected" from="Heart2" to="." method="_on_heart_2_garlic_collected"]
-[connection signal="garlic_collected" from="Heart3" to="." method="_on_heart_3_garlic_collected"]
-[connection signal="garlic_collected" from="Heart3" to="." method="garlic_collected"]
+[node name="Level" type="RichTextLabel" parent="." unique_id=877971487]
+offset_left = 796.0
+offset_top = 2.0
+offset_right = 1162.0
+offset_bottom = 90.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "CARDIO 1/3"
+
+[node name="HowTo" type="ColorRect" parent="." unique_id=355268430]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1150.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HowTo" unique_id=177812268]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 57.0
+offset_right = 1122.0
+offset_bottom = 582.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "HOW TO PLAY:
+
+Collect all the items before the time runs out! There are three levels to this minigame, complete all of them to progress!
+"
+
+[connection signal="heart_collected" from="Heart1" to="." method="hearts_collect"]
+[connection signal="heart_collected" from="Heart2" to="." method="hearts_collect"]
+[connection signal="heart_collected" from="Heart3" to="." method="hearts_collect"]

@@ -32,19 +32,19 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 #lives visually so later you can always find alternative code. Now, dw abt it.
 
 		4:
-			garlic.texture = load(bw)
+			garlic_5.texture = load(bw)
 		3:
-			garlic.texture = load(bw)
-			garlic_2.texture = load(bw)
+			garlic_5.texture = load(bw)
+			garlic_4.texture = load(bw)
 		2:
-			garlic.texture = load(bw)
-			garlic_2.texture = load(bw)
+			garlic_5.texture = load(bw)
+			garlic_4.texture = load(bw)
 			garlic_3.texture = load(bw)
 		1:
-			garlic.texture = load(bw)
-			garlic_2.texture = load(bw)
-			garlic_3.texture = load(bw)
+			garlic_5.texture = load(bw)
 			garlic_4.texture = load(bw)
+			garlic_3.texture = load(bw)
+			garlic_2.texture = load(bw)
 		0:
 			garlic.texture = load(bw)
 			garlic_2.texture = load(bw)
