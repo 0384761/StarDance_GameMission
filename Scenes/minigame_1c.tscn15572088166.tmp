@@ -64,7 +64,6 @@ size = Vector2(5.934944, 27.943378)
 script = ExtResource("1_v12ww")
 
 [node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=33455970]
-process_mode = 3
 repeat_size = Vector2(1160, 0)
 autoscroll = Vector2(100, 0)
 

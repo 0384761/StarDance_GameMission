@@ -52,14 +52,14 @@ layout_mode = 2
 texture = ExtResource("3_6j6o5")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=534886812]
-offset_left = 416.0
-offset_top = 315.0
-offset_right = 772.0
-offset_bottom = 437.0
+offset_left = 375.0
+offset_top = 326.0
+offset_right = 783.0
+offset_bottom = 448.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 90
-text = "Level #"
+text = "GAME: #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=1624834427]
 offset_left = 671.0

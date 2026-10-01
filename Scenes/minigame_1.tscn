@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="6_0uv5o"]
 [ext_resource type="Script" uid="uid://bcjnlvxu45n7q" path="res://Scenes/heart_2.gd" id="7_ojqsy"]
 [ext_resource type="Script" uid="uid://5w82r47gk7kl" path="res://Scenes/heart_3.gd" id="8_jmcek"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_ne1wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d56g"]
 size = Vector2(1162, 41.5)
@@ -56,6 +57,7 @@ _data = {
 script = ExtResource("1_5txvl")
 
 [node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=356672506]
+process_mode = 3
 repeat_size = Vector2(1190, 0)
 autoscroll = Vector2(100, 0)
 
@@ -202,19 +204,20 @@ scale = Vector2(3.5599988, 5.520001)
 shape = SubResource("CircleShape2D_6d56g")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=877971487]
-offset_left = 796.0
-offset_top = 2.0
-offset_right = 1162.0
-offset_bottom = 90.0
+offset_left = 747.0
+offset_top = 25.0
+offset_right = 1188.0
+offset_bottom = 70.0
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 60
-text = "CARDIO 1/3"
+theme_override_font_sizes/normal_font_size = 30
+text = "LEVEL 1/3 : PAUSE (CTRL)"
 
 [node name="HowTo" type="ColorRect" parent="." unique_id=355268430]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1150.0
-offset_bottom = 646.0
+visible = false
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 1161.0
+offset_bottom = 661.0
 color = Color(0, 0, 0, 0.64705884)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HowTo" unique_id=177812268]
@@ -225,10 +228,21 @@ offset_right = 1122.0
 offset_bottom = 582.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 60
-text = "HOW TO PLAY:
+text = "HOW TO PLAY (GAME 1):
 
 Collect all the items before the time runs out! There are three levels to this minigame, complete all of them to progress!
 "
+
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=1030763116]
+visible = false
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1162.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("9_ne1wf")]
+position = Vector2(4, 6)
 
 [connection signal="heart_collected" from="Heart1" to="." method="hearts_collect"]
 [connection signal="heart_collected" from="Heart2" to="." method="hearts_collect"]

@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://c74e5tugte5v5"]
 
+[ext_resource type="Script" uid="uid://b7xq3kun0tox5" path="res://Scenes/path_screen.gd" id="1_q23io"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="2_mqa5x"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="3_mqa5x"]
+
 [node name="path_screen" type="Node2D" unique_id=1737506561]
+script = ExtResource("1_q23io")
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("3_mqa5x")]
+
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=1352698880]
+visible = false
+offset_left = -17.0
+offset_top = -9.0
+offset_right = 1168.0
+offset_bottom = 663.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("2_mqa5x")]
+position = Vector2(17, 9)

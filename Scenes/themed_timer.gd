@@ -26,6 +26,12 @@ func Timer(start_time: float): # making a new function for timer countdown!
 	return
 	
 func wait(seconds: float) -> void: # write this simple function out for wait!
-	await get_tree().create_timer(seconds).timeout # makes u wait
-	
+	await get_tree().create_timer(seconds).timeout
+
+func pause():
+	get_tree().paused = true
+
+func unPause():
+	get_tree().paused = false
+
 	

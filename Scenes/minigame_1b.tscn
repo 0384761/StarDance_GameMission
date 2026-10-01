@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://cm6bvgrcbcprn"]
 
 [ext_resource type="Texture2D" uid="uid://bbvkdmr3j0mmu" path="res://addons/brains.jpg" id="1_1ajrv"]
-[ext_resource type="Script" uid="uid://c4mm1uin46n75" path="res://Scenes/minigame_1b.gd" id="1_pxsb7"]
+[ext_resource type="Script" uid="uid://cvmupak1u1qta" path="res://Scenes/minigame_1.gd" id="1_bct07"]
 [ext_resource type="Texture2D" uid="uid://bd6d1xx4tsjk0" path="res://addons/brain1-removebg-preview.png" id="2_1ajrv"]
 [ext_resource type="Script" uid="uid://bleucsuydsq3g" path="res://Scenes/brain_1.gd" id="3_4jh0i"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_mxoau"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_4jh0i"]
 [ext_resource type="Script" uid="uid://cnu6kgm8mvf05" path="res://Scenes/brain_2.gd" id="7_4jh0i"]
 [ext_resource type="Script" uid="uid://cg6s28sddigbd" path="res://Scenes/brain_3.gd" id="8_bct07"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_g4bw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bct07"]
 size = Vector2(1162, 41.5)
@@ -54,9 +55,10 @@ _data = {
 radius = 14.044941
 
 [node name="minigame_1b" type="Node2D" unique_id=737195025]
-script = ExtResource("1_pxsb7")
+script = ExtResource("1_bct07")
 
 [node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1104706131]
+process_mode = 3
 repeat_size = Vector2(1160, 0)
 autoscroll = Vector2(100, 0)
 
@@ -132,6 +134,7 @@ scale = Vector2(1, 1.64)
 shape = SubResource("RectangleShape2D_bct07")
 
 [node name="Brain1" type="Node2D" parent="." unique_id=948572896]
+process_mode = 3
 position = Vector2(-3.0517578e-05, -3.0517578e-05)
 scale = Vector2(1, 1.0000001)
 script = ExtResource("3_4jh0i")
@@ -162,6 +165,7 @@ position = Vector2(940, 399.4299)
 position = Vector2(-520, -298)
 
 [node name="Brain2" type="Node2D" parent="." unique_id=1659086549]
+process_mode = 3
 position = Vector2(305, 105)
 script = ExtResource("7_4jh0i")
 
@@ -181,6 +185,7 @@ scale = Vector2(3.5599988, 3.4114788)
 shape = SubResource("CircleShape2D_67osj")
 
 [node name="Brain3" type="Node2D" parent="." unique_id=1801632258]
+process_mode = 3
 position = Vector2(-289, -139)
 script = ExtResource("8_bct07")
 
@@ -200,14 +205,25 @@ position = Vector2(493.00003, 327)
 scale = Vector2(3.5599988, 3.4114788)
 shape = SubResource("CircleShape2D_67osj")
 
-[node name="Level" type="RichTextLabel" parent="." unique_id=1929414213]
-offset_left = 817.0
-offset_top = 2.0
-offset_right = 1152.0
-offset_bottom = 90.0
+[node name="Level" type="RichTextLabel" parent="." unique_id=817565794]
+offset_left = 752.0
+offset_top = 26.0
+offset_right = 1127.0
+offset_bottom = 76.0
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 60
-text = "NEURO 2/3"
+theme_override_font_sizes/normal_font_size = 30
+text = "LEVEL 2/3 : PAUSE (CTRL)"
+
+[node name="HowTo" type="ColorRect" parent="." unique_id=663766118]
+visible = false
+offset_left = -11.0
+offset_top = -8.0
+offset_right = 1162.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="PauseMenu" parent="." unique_id=956795780 instance=ExtResource("9_g4bw1")]
+visible = false
 
 [connection signal="brains_collected" from="Brain1" to="." method="brain_collect"]
 [connection signal="brains_collected" from="Brain2" to="." method="brain_collect"]

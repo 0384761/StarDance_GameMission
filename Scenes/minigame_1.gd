@@ -1,36 +1,57 @@
 extends Node2D
 
-
-@onready var howTo: ColorRect = $HowTo
 @onready var themed_timer: Node2D = $Themed_Timer 
-# ^^^ You dragged this in the scene by the way 
+@onready var howTo: ColorRect = $HowTo
+@onready var pauseMenu: ColorRect = $OuterMenu
 
-var heart_collected = 0 # just keeping track of garlic collected
-var timer_end = false # boolean (true or false) stating whether the timer ended
+var heart_collected = 0 
+var brains_collected = 0 
+var bone_collected = 0
+var timer_end = false
 
 func _ready() -> void:
-
-		#Below you can see that I have a function that I named. I grab a 
-		#function from it that was created in it's script and use `await` to 
-		# tell the script to wait for a signal, or for when a function finshes
-	await get_tree().create_timer(5).timeout
+	
+	if howTo.is_visible_in_tree():
+		await get_tree().create_timer(5.0).timeout
 	howTo.hide()
-
-	await themed_timer.Timer(10.0) #accessing a function from this node
-	#after this is compeleted...
-	timer_end = true # now we're saying "oh ye you ran out of time"
-
-func _process(delta: float) -> void: # running every frame brochacho
+	await themed_timer.Timer(10.0) 
+	timer_end = true
 	
-	if heart_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
-		get_tree().change_scene_to_file("res://Scenes/minigame_1b.tscn")
-	
-	if timer_end: # if the timer does end...
-		Global.minigames_done -=1 #go back a minigame
-		Global.lives -= 1 # lose ur lives
-		get_tree().change_scene_to_file("res://Scenes/timer_scene.tscn") # back to intermission
 		
+func _process(delta: float) -> void: 
+	
+	if !pauseMenu:
+		themed_timer.unPause()
+	
+	if heart_collected == 3: 
+		heart_collected = 0
+		get_tree().change_scene_to_file("res://Scenes/minigame_1b.tscn")
+	if brains_collected == 3:
 
-func hearts_collect() -> void: # cool function that you connect to those garlics
+		get_tree().change_scene_to_file("res://Scenes/minigame_1c.tscn")
+	if bone_collected == 3:
+		bone_collected = 0
+		get_tree().change_scene_to_file("res://Scenes/timer_scene.tscn")
+	
+	if timer_end: 
+		Global.minigames_done -=1 
+		Global.lives -= 1 
+		get_tree().change_scene_to_file("res://Scenes/timer_scene.tscn")
+
+func _input(ev):
+	if Input.is_key_pressed(KEY_CTRL):
+		get_tree().paused = true
+		pauseMenu.visible = true
+		pauseMenu.show()
+
+func hearts_collect() -> void:
 	heart_collected = heart_collected +1
+	return
+	
+func brain_collect() -> void: 
+	brains_collected = brains_collected +1
+	return
+
+func bones_collect() -> void: 
+	bone_collected = bone_collected +1
 	return
