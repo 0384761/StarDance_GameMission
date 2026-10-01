@@ -222,8 +222,14 @@ offset_right = 1162.0
 offset_bottom = 658.0
 color = Color(0, 0, 0, 0.64705884)
 
-[node name="PauseMenu" parent="." unique_id=956795780 instance=ExtResource("9_g4bw1")]
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=1753692052]
 visible = false
+offset_right = 1185.0
+offset_bottom = 672.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("9_g4bw1")]
+position = Vector2(17, 9)
 
 [connection signal="brains_collected" from="Brain1" to="." method="brain_collect"]
 [connection signal="brains_collected" from="Brain2" to="." method="brain_collect"]
