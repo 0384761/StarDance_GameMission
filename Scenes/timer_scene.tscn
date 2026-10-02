@@ -5,6 +5,43 @@
 [ext_resource type="Texture2D" uid="uid://tmtewf1kw146" path="res://addons/themillionthheart-removebg-preview.png" id="3_6j6o5"]
 [ext_resource type="Texture2D" uid="uid://cso144ayj178u" path="res://addons/tray1-removebg-preview.png" id="3_aoy4m"]
 
+[sub_resource type="Animation" id="Animation_l88kf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.38639975, 0.3432959)]
+}
+
+[sub_resource type="Animation" id="Animation_aoy4m"]
+resource_name = "heart_beat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.38639975, 0.3432959), Vector2(0.392, 0.349)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_so330"]
+_data = {
+&"RESET": SubResource("Animation_l88kf"),
+&"heart_beat": SubResource("Animation_aoy4m")
+}
+
 [node name="timer_scene" type="Node2D" unique_id=1018746441]
 script = ExtResource("1_6j6o5")
 
@@ -32,11 +69,13 @@ scale = Vector2(0.9199994, 0.79982543)
 texture = ExtResource("3_aoy4m")
 
 [node name="HeartContainer" type="HBoxContainer" parent="." unique_id=206122632]
-offset_left = 121.00001
-offset_top = 129.0
-offset_right = 2637.0
-offset_bottom = 1217.3787
-scale = Vector2(0.3579529, 0.13873848)
+visible = false
+offset_left = -685.00006
+offset_top = -329.0
+offset_right = 1831.0
+offset_bottom = 759.37866
+scale = Vector2(0.365, 0.141)
+pivot_offset = Vector2(1258, 544.19)
 
 [node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=180443796]
 layout_mode = 2
@@ -57,6 +96,75 @@ texture = ExtResource("3_6j6o5")
 [node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=220276278]
 layout_mode = 2
 texture = ExtResource("3_6j6o5")
+
+[node name="Heart5" type="TextureRect" parent="." unique_id=27968839]
+offset_left = 316.99997
+offset_top = -38.000015
+offset_right = 817.0
+offset_bottom = 462.0
+scale = Vector2(0.38639975, 0.3432959)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_6j6o5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heart5" unique_id=1552507240]
+libraries/ = SubResource("AnimationLibrary_so330")
+autoplay = &"heart_beat"
+
+[node name="Heart6" type="TextureRect" parent="." unique_id=1595234508]
+offset_left = 155.00003
+offset_top = -41.0
+offset_right = 655.0
+offset_bottom = 459.0
+scale = Vector2(0.38639975, 0.3432959)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_6j6o5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heart6" unique_id=137226734]
+libraries/ = SubResource("AnimationLibrary_so330")
+autoplay = &"heart_beat"
+speed_scale = 1.2
+
+[node name="Heart7" type="TextureRect" parent="." unique_id=485232847]
+offset_left = 3.0517578e-05
+offset_top = -43.0
+offset_right = 500.00003
+offset_bottom = 457.0
+scale = Vector2(0.38639975, 0.3432959)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_6j6o5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heart7" unique_id=2019952193]
+libraries/ = SubResource("AnimationLibrary_so330")
+autoplay = &"heart_beat"
+speed_scale = 1.1
+
+[node name="Heart8" type="TextureRect" parent="." unique_id=684141519]
+offset_left = 481.00003
+offset_top = -36.0
+offset_right = 981.0
+offset_bottom = 464.0
+scale = Vector2(0.38639975, 0.3432959)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_6j6o5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heart8" unique_id=1270615298]
+libraries/ = SubResource("AnimationLibrary_so330")
+autoplay = &"heart_beat"
+speed_scale = 1.3
+
+[node name="Heart9" type="TextureRect" parent="." unique_id=237950236]
+offset_left = 643.0
+offset_top = -36.0
+offset_right = 1143.0
+offset_bottom = 464.0
+scale = Vector2(0.38639975, 0.3432959)
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_6j6o5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heart9" unique_id=986474616]
+libraries/ = SubResource("AnimationLibrary_so330")
+autoplay = &"heart_beat"
+speed_scale = 1.9
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=534886812]
 offset_left = 264.0
