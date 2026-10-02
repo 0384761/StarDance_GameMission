@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://b5l6n8md2oje6"]
+
+[ext_resource type="Texture2D" uid="uid://bxcepgyxrigui" path="res://addons/greys8.jpg" id="1_asmx3"]
+[ext_resource type="Script" uid="uid://dhet8radyqm0n" path="res://Scenes/minigame_3.gd" id="1_h40nw"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="3_ihkhm"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="3_we0jk"]
+[ext_resource type="Script" uid="uid://c2fms614si104" path="res://Scenes/wrong_ans.gd" id="4_lr4ld"]
+[ext_resource type="Script" uid="uid://f1mnoh77gd73" path="res://Scenes/right_ans.gd" id="5_rpf30"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvnsp"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 0.64705884)
+
+[node name="minigame_3" type="Node2D" unique_id=1919113545]
+script = ExtResource("1_h40nw")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1819784801]
+offset_left = -16.0
+offset_top = -9.0
+offset_right = 1184.0
+offset_bottom = 666.0
+texture = ExtResource("1_asmx3")
+
+[node name="Question" type="RichTextLabel" parent="." unique_id=565672589]
+offset_left = 81.0
+offset_top = 108.0
+offset_right = 1112.0
+offset_bottom = 278.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "Q1. What was the name of the dog Meredith got with Izzie?"
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("3_we0jk")]
+position = Vector2(-510, -305)
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1679432911]
+offset_left = 771.0
+offset_top = 20.0
+offset_right = 1137.0
+offset_bottom = 68.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 30
+text = "LEVEL 1/4  (PAUSE : CTRL)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=126656272]
+offset_left = 82.0
+offset_top = 311.0
+offset_right = 1084.0
+offset_bottom = 595.0
+theme_override_constants/separation = 20
+
+[node name="A" type="Button" parent="VBoxContainer" unique_id=1904063271]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvnsp")
+text = "A. Henry"
+script = ExtResource("4_lr4ld")
+
+[node name="B" type="Button" parent="VBoxContainer" unique_id=38556085]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvnsp")
+text = "B. Doc"
+script = ExtResource("5_rpf30")
+
+[node name="C" type="Button" parent="VBoxContainer" unique_id=177032532]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvnsp")
+text = "C. Denny"
+script = ExtResource("4_lr4ld")
+
+[node name="D" type="Button" parent="VBoxContainer" unique_id=1715443852]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_cvnsp")
+text = "D. George"
+script = ExtResource("4_lr4ld")
+
+[node name="HowTo" type="ColorRect" parent="." unique_id=1357430134]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1150.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="Instructions" type="RichTextLabel" parent="HowTo" unique_id=108313184]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 57.0
+offset_right = 1098.0
+offset_bottom = 582.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "HOW TO PLAY (Minigame 3):
+
+Choose the correct option for each question (out of A, B, C, or D). Press the button to confirm your answer, and do it before the time runs out!"
+
+[node name="Correct" type="ColorRect" parent="." unique_id=228642668]
+visible = false
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 1165.0
+offset_bottom = 656.0
+color = Color(0, 0.4627451, 0, 0.64705884)
+
+[node name="CMessage" type="RichTextLabel" parent="Correct" unique_id=385631307]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 289.0
+offset_right = 741.0
+offset_bottom = 384.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "CORRECT!"
+
+[node name="Incorrect" type="ColorRect" parent="." unique_id=225129592]
+visible = false
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 1165.0
+offset_bottom = 656.0
+color = Color(0.7126662, 0.0453213, 1.92523e-07, 0.64705884)
+
+[node name="IMessage" type="RichTextLabel" parent="Incorrect" unique_id=2037453858]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 288.0
+offset_right = 768.0
+offset_bottom = 383.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "INCORRECT!"
+
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=1034871321]
+visible = false
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1162.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("3_ihkhm")]
+position = Vector2(4, 6)
+
+[connection signal="pressed" from="VBoxContainer/A" to="VBoxContainer/A" method="_on_pressed"]
+[connection signal="answered" from="VBoxContainer/B" to="." method="answered1"]
+[connection signal="pressed" from="VBoxContainer/B" to="VBoxContainer/B" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/C" to="VBoxContainer/A" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/D" to="VBoxContainer/A" method="_on_pressed"]

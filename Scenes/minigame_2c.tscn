@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dxhk47a77lqt1"]
+
+[ext_resource type="Texture2D" uid="uid://dooxk12yo2t55" path="res://addons/skinwound.png" id="1_tsp2m"]
+
+[node name="minigame_2c" type="Node2D" unique_id=150282235]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1853181511]
+offset_left = -35.0
+offset_top = 788.00006
+offset_right = 1552.0
+offset_bottom = 3033.0
+rotation = -1.534576
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("1_tsp2m")

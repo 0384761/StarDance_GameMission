@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://vm42efq3goex"]
+
+[ext_resource type="Script" uid="uid://dhet8radyqm0n" path="res://Scenes/minigame_3.gd" id="1_d6v4b"]
+[ext_resource type="Texture2D" uid="uid://bxcepgyxrigui" path="res://addons/greys8.jpg" id="2_w0lhk"]
+[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="3_7tmvc"]
+[ext_resource type="Script" uid="uid://c2fms614si104" path="res://Scenes/wrong_ans.gd" id="4_bpf4p"]
+[ext_resource type="Script" uid="uid://f1mnoh77gd73" path="res://Scenes/right_ans.gd" id="5_x1vi6"]
+[ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="6_uk758"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y85h0"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 0.64705884)
+
+[node name="minigame_3b" type="Node2D" unique_id=1217933033]
+script = ExtResource("1_d6v4b")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1993541261]
+offset_left = -16.0
+offset_top = -9.0
+offset_right = 1184.0
+offset_bottom = 666.0
+texture = ExtResource("2_w0lhk")
+
+[node name="Question" type="RichTextLabel" parent="." unique_id=1930355233]
+offset_left = 81.0
+offset_top = 108.0
+offset_right = 1112.0
+offset_bottom = 278.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "Q2. By how many points did George fail his intern exam?
+What was the name of the dog Meredith got with Izzie?"
+
+[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("3_7tmvc")]
+position = Vector2(-510, -305)
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=606031392]
+offset_left = 771.0
+offset_top = 20.0
+offset_right = 1137.0
+offset_bottom = 68.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 30
+text = "LEVEL 2/4  (PAUSE : CTRL)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=488851301]
+offset_left = 82.0
+offset_top = 311.0
+offset_right = 1084.0
+offset_bottom = 595.0
+theme_override_constants/separation = 20
+
+[node name="A" type="Button" parent="VBoxContainer" unique_id=1737577103]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_y85h0")
+text = "A. 0.5"
+script = ExtResource("4_bpf4p")
+
+[node name="B" type="Button" parent="VBoxContainer" unique_id=2044364487]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_y85h0")
+text = "B. 5"
+script = ExtResource("4_bpf4p")
+
+[node name="C" type="Button" parent="VBoxContainer" unique_id=1397228591]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_y85h0")
+text = "C. 2"
+script = ExtResource("4_bpf4p")
+
+[node name="D" type="Button" parent="VBoxContainer" unique_id=1839470797]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_y85h0")
+text = "D. 1"
+script = ExtResource("5_x1vi6")
+
+[node name="HowTo" type="ColorRect" parent="." unique_id=396855525]
+visible = false
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1150.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="Incorrect" type="ColorRect" parent="." unique_id=1448455019]
+visible = false
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 1165.0
+offset_bottom = 656.0
+color = Color(0.7126662, 0.0453213, 1.92523e-07, 0.64705884)
+
+[node name="IMessage" type="RichTextLabel" parent="Incorrect" unique_id=703852639]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 288.0
+offset_right = 768.0
+offset_bottom = 383.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "INCORRECT!"
+
+[node name="Correct" type="ColorRect" parent="." unique_id=1338802087]
+visible = false
+offset_left = -8.0
+offset_top = -11.0
+offset_right = 1165.0
+offset_bottom = 656.0
+color = Color(0, 0.4627451, 0, 0.64705884)
+
+[node name="CMessage" type="RichTextLabel" parent="Correct" unique_id=650959397]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 289.0
+offset_right = 741.0
+offset_bottom = 384.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 60
+text = "CORRECT!"
+
+[node name="OuterMenu" type="ColorRect" parent="." unique_id=1671223213]
+visible = false
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 1162.0
+offset_bottom = 657.0
+color = Color(0, 0, 0, 0.64705884)
+
+[node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("6_uk758")]
+position = Vector2(4, 6)
+
+[connection signal="pressed" from="VBoxContainer/A" to="VBoxContainer/A" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/B" to="VBoxContainer/A" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/C" to="VBoxContainer/A" method="_on_pressed"]
+[connection signal="answered" from="VBoxContainer/D" to="." method="answered2"]
+[connection signal="pressed" from="VBoxContainer/D" to="VBoxContainer/D" method="_on_pressed"]

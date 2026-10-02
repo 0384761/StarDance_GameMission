@@ -1,31 +1,31 @@
 [gd_scene format=3 uid="uid://ddxbnu2tx4joi"]
 
 [ext_resource type="Script" uid="uid://dp6qevi4tc4by" path="res://Scenes/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://dtsjciwslqs80" path="res://addons/Firefly_RemoveBackground.png" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://764c68ckrr8t" path="res://addons/mer1-removebg-preview.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6d56g"]
-radius = 10.874806
+radius = 10.222157
 
 [node name="Player" type="CharacterBody2D" unique_id=986568745]
 scale = Vector2(0.63999814, 0.72000015)
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=898517619]
-position = Vector2(127, 158)
-rotation = -0.020445041
-scale = Vector2(0.16860186, 0.15572013)
-texture = ExtResource("1_v0iea")
+position = Vector2(168.75049, 162.49997)
+rotation = 0.015440084
+scale = Vector2(0.5, 0.462)
+texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=576464190]
-position = Vector2(169.00002, 162)
-rotation = 0.06976281
-scale = Vector2(3.7945216, -10.609523)
+position = Vector2(168.75047, 161.11108)
+rotation = -0.015422481
+scale = Vector2(3.700779, -11.083935)
 shape = SubResource("CircleShape2D_6d56g")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1055868300]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1961244342]
-position = Vector2(169.00002, 162)
-rotation = 0.06976282
-scale = Vector2(3.7945213, -10.609523)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1192205571]
+position = Vector2(168.75047, 161.11108)
+rotation = -0.015422481
+scale = Vector2(3.700779, -11.083935)
 shape = SubResource("CircleShape2D_6d56g")
