@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ly2b1legj7jo" path="res://Scenes/heart.gd" id="2_o6yob"]
 [ext_resource type="Texture2D" uid="uid://tmtewf1kw146" path="res://addons/themillionthheart-removebg-preview.png" id="4_jmcek"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="6_0uv5o"]
+[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="7_jmcek"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_ne1wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d56g"]
@@ -210,22 +211,30 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
 text = "LEVEL 1/3  (PAUSE : CTRL)"
 
-[node name="HowTo" type="ColorRect" parent="." unique_id=355268430]
-offset_left = -11.0
-offset_top = -10.0
-offset_right = 1161.0
-offset_bottom = 661.0
+[node name="HowTo" type="TextureRect" parent="." unique_id=265418629]
+offset_left = -22.0
+offset_top = -168.0
+offset_right = 1178.0
+offset_bottom = 732.0
+texture = ExtResource("7_jmcek")
+
+[node name="Tint" type="ColorRect" parent="HowTo" unique_id=795879724]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 164.0
+offset_right = 1190.0
+offset_bottom = 826.0
 color = Color(0, 0, 0, 0.64705884)
 
-[node name="Instructions" type="RichTextLabel" parent="HowTo" unique_id=177812268]
+[node name="Instructions2" type="RichTextLabel" parent="HowTo/Tint" unique_id=2002433424]
 layout_mode = 0
 offset_left = 56.0
 offset_top = 57.0
-offset_right = 1122.0
+offset_right = 1098.0
 offset_bottom = 582.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 60
-text = "HOW TO PLAY (Minigame 1):
+text = "MINIGAME 1 (Platforming):
 
 Collect all the items before the time runs out! You need to complete the Cardio, Neuro and Ortho levels to progress!"
 

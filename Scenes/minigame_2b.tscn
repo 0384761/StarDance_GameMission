@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dstnbdsx6nthq" path="res://addons/bomb-removebg-preview.png" id="4_n2ut7"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="5_5iwsh"]
 [ext_resource type="Script" uid="uid://diqlkvjffocsb" path="res://Scenes/bad_button.gd" id="6_5iwsh"]
+[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="9_der5o"]
 [ext_resource type="Texture2D" uid="uid://dst2vfvtav6" path="res://addons/explosion.png" id="10_1peus"]
 
 [node name="minigame_2b" type="Node2D" unique_id=1266439987]
@@ -94,13 +95,13 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
 text = "LEVEL 2/2  (PAUSE : CTRL)"
 
-[node name="HowTo" type="ColorRect" parent="." unique_id=1192576337]
+[node name="HowTo" type="TextureRect" parent="." unique_id=1467555907]
 visible = false
 offset_left = -1.0
 offset_top = -1.0
-offset_right = 1150.0
-offset_bottom = 646.0
-color = Color(0, 0, 0, 0.64705884)
+offset_right = 1199.0
+offset_bottom = 799.0
+texture = ExtResource("9_der5o")
 
 [node name="OuterMenu" type="ColorRect" parent="." unique_id=755547896]
 visible = false

@@ -7,7 +7,6 @@ func _on_restart_pressed() -> void:
 
 func _on_continue_pressed() -> void:
 	get_tree().paused = false
-	self.hide()
 	self.get_parent().hide()
 
 func _on_exit_pressed() -> void:

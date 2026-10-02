@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bkms7tv5wfklv" path="res://Scenes/bone.gd" id="3_3hq7a"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_yh7p2"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_3hq7a"]
+[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="7_v12ww"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_hydyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v12ww"]
@@ -218,13 +219,13 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
 text = "LEVEL 3/3  (PAUSE: CTRL)"
 
-[node name="HowTo" type="ColorRect" parent="." unique_id=459795266]
+[node name="HowTo" type="TextureRect" parent="." unique_id=1798164267]
 visible = false
 offset_left = -11.0
 offset_top = -8.0
-offset_right = 1162.0
-offset_bottom = 658.0
-color = Color(0, 0, 0, 0.64705884)
+offset_right = 1189.0
+offset_bottom = 792.0
+texture = ExtResource("7_v12ww")
 
 [node name="OuterMenu" type="ColorRect" parent="." unique_id=258151475]
 visible = false

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $Themed_Timer 
-@onready var howTo: ColorRect = $HowTo
+@onready var howTo: TextureRect = $HowTo
 @onready var pauseMenu: ColorRect = $OuterMenu
 
 var buttons_pressed1 := 0

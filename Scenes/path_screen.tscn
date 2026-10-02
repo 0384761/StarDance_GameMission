@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b7xq3kun0tox5" path="res://Scenes/path_screen.gd" id="1_q23io"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="2_mqa5x"]
-[ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="3_mqa5x"]
+[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="3_mqa5x"]
 
 [node name="path_screen" type="Node2D" unique_id=1737506561]
 script = ExtResource("1_q23io")
-
-[node name="Themed_Timer" parent="." unique_id=527067167 instance=ExtResource("3_mqa5x")]
 
 [node name="OuterMenu" type="ColorRect" parent="." unique_id=1352698880]
 visible = false
@@ -19,3 +17,21 @@ color = Color(0, 0, 0, 0.64705884)
 
 [node name="pause_menu" parent="OuterMenu" unique_id=956795780 instance=ExtResource("2_mqa5x")]
 position = Vector2(17, 9)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1622577969]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=1787047805]
+offset_left = -29.0
+offset_top = -169.0
+offset_right = 1171.0
+offset_bottom = 731.0
+texture = ExtResource("3_mqa5x")
+
+[node name="Tint" type="ColorRect" parent="." unique_id=1897744309]
+offset_left = -24.0
+offset_top = -25.0
+offset_right = 1221.0
+offset_bottom = 703.0
+color = Color(0, 0, 0, 0.64705884)
