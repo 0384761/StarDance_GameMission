@@ -68,35 +68,6 @@ rotation = -0.0014458238
 scale = Vector2(0.9199994, 0.79982543)
 texture = ExtResource("3_aoy4m")
 
-[node name="HeartContainer" type="HBoxContainer" parent="." unique_id=206122632]
-visible = false
-offset_left = -685.00006
-offset_top = -329.0
-offset_right = 1831.0
-offset_bottom = 759.37866
-scale = Vector2(0.365, 0.141)
-pivot_offset = Vector2(1258, 544.19)
-
-[node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=180443796]
-layout_mode = 2
-texture = ExtResource("3_6j6o5")
-
-[node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=914644325]
-layout_mode = 2
-texture = ExtResource("3_6j6o5")
-
-[node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=1866033291]
-layout_mode = 2
-texture = ExtResource("3_6j6o5")
-
-[node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=610856829]
-layout_mode = 2
-texture = ExtResource("3_6j6o5")
-
-[node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=220276278]
-layout_mode = 2
-texture = ExtResource("3_6j6o5")
-
 [node name="Heart5" type="TextureRect" parent="." unique_id=27968839]
 offset_left = 316.99997
 offset_top = -38.000015

@@ -1,10 +1,16 @@
 extends Node2D
-@onready var garlic_container: HBoxContainer = $HeartContainer
-@onready var garlic: TextureRect = $HeartContainer/Heart1
-@onready var garlic_2: TextureRect = $HeartContainer/Heart2
-@onready var garlic_3: TextureRect = $HeartContainer/Heart3
-@onready var garlic_4: TextureRect = $HeartContainer/Heart4
-@onready var garlic_5: TextureRect = $HeartContainer/Heart5
+
+@onready var heart1: TextureRect = $Heart7
+@onready var anim1: AnimationPlayer = $Heart7/AnimationPlayer
+@onready var heart2: TextureRect = $Heart6
+@onready var anim2: AnimationPlayer = $Heart6/AnimationPlayer
+@onready var heart3: TextureRect = $Heart5
+@onready var anim3: AnimationPlayer = $Heart5/AnimationPlayer
+@onready var heart4: TextureRect = $Heart8
+@onready var anim4: AnimationPlayer = $Heart8/AnimationPlayer
+@onready var heart5: TextureRect = $Heart9
+@onready var anim5: AnimationPlayer = $Heart9/AnimationPlayer
+
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 
@@ -12,7 +18,8 @@ var time
 var bw = "res://addons/themillionthheartb&w.png"
 
 func _ready() -> void:
-	await Timer(5.0) # using the function created
+	Global.lives = 3
+	await Timer(5.0) 
 	
 	if Global.lives == 0:
 			get_tree().change_scene_to_file("res://Scenes/lose_screen.tscn")
@@ -32,25 +39,40 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 #lives visually so later you can always find alternative code. Now, dw abt it.
 
 		4:
-			garlic_5.texture = load(bw)
+			heart5.texture = load(bw)
+			anim5.pause()
 		3:
-			garlic_5.texture = load(bw)
-			garlic_4.texture = load(bw)
+			heart5.texture = load(bw)
+			anim5.pause()
+			heart4.texture = load(bw)
+			anim4.pause()
 		2:
-			garlic_5.texture = load(bw)
-			garlic_4.texture = load(bw)
-			garlic_3.texture = load(bw)
+			heart5.texture = load(bw)
+			anim5.pause()
+			heart4.texture = load(bw)
+			anim4.pause()
+			heart3.texture = load(bw)
+			anim3.pause()
 		1:
-			garlic_5.texture = load(bw)
-			garlic_4.texture = load(bw)
-			garlic_3.texture = load(bw)
-			garlic_2.texture = load(bw)
+			heart5.texture = load(bw)
+			anim5.pause()
+			heart4.texture = load(bw)
+			anim4.pause()
+			heart3.texture = load(bw)
+			anim3.pause()
+			heart2.texture = load(bw)
+			anim2.pause()
 		0:
-			garlic.texture = load(bw)
-			garlic_2.texture = load(bw)
-			garlic_3.texture = load(bw)
-			garlic_4.texture = load(bw)
-			garlic_5.texture = load(bw)
+			heart5.texture = load(bw)
+			anim5.pause()
+			heart4.texture = load(bw)
+			anim4.pause()
+			heart3.texture = load(bw)
+			anim3.pause()
+			heart2.texture = load(bw)
+			anim2.pause()
+			heart1.texture = load(bw)
+			anim1.pause()
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "MINIGAME: " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
