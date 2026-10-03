@@ -18,7 +18,6 @@ var time
 var bw = "res://addons/themillionthheartb&w.png"
 
 func _ready() -> void:
-	Global.lives = 3
 	await Timer(5.0) 
 	
 	if Global.lives == 0:

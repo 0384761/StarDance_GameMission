@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bo58yeqy76dmk"]
+
+[ext_resource type="AudioStream" uid="uid://crnjejtjmtydn" path="res://addons/TheFray.mp3" id="1_8jc7s"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=98842490]
+process_mode = 3
+stream = ExtResource("1_8jc7s")
+autoplay = true
+bus = &"Music"
