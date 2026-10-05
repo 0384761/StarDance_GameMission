@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var timer: RichTextLabel = $Themed_Timer #literally just the richlabeltext
 
+
 var time : float
 
 # Called when the node enters the scene tree for the first time.
@@ -26,7 +27,7 @@ func Timer(start_time: float): # making a new function for timer countdown!
 	return
 	
 func wait(seconds: float) -> void: # write this simple function out for wait!
-	await get_tree().create_timer(seconds).timeout
+	await get_tree().create_timer(seconds, false).timeout
 
 func pause():
 	get_tree().paused = true

@@ -17,11 +17,7 @@ func _ready() -> void:
 	await themed_timer.Timer(10.0) 
 	timer_end = true
 	
-		
 func _process(delta: float) -> void: 
-	
-	if !pauseMenu:
-		themed_timer.unPause()
 	
 	if heart_collected == 3: 
 		heart_collected = 0

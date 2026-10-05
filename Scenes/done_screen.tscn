@@ -1,49 +1,128 @@
 [gd_scene format=3 uid="uid://bt0xxolepcdsh"]
 
 [ext_resource type="Script" uid="uid://clkf583wq3qha" path="res://Scenes/done_screen.gd" id="1_3rr80"]
-[ext_resource type="Texture2D" uid="uid://cqlsqwm44b4k3" path="res://addons/greys6.jpg" id="2_3rr80"]
+[ext_resource type="Texture2D" uid="uid://bwkik5ns82inw" path="res://addons/greys9.jpg" id="2_3rr80"]
+[ext_resource type="Texture2D" uid="uid://dtsjciwslqs80" path="res://addons/Firefly_RemoveBackground.png" id="3_8rpo2"]
+[ext_resource type="Texture2D" uid="uid://764c68ckrr8t" path="res://addons/mer1-removebg-preview.png" id="4_5u8ma"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rr80"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.64705884)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q1k2"]
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 0.64705884)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18039216, 0.18039216, 0.18039216, 0.64705884)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rpo2"]
+bg_color = Color(0.24115604, 0.24115604, 0.24115604, 0.64705884)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23921569, 0.23921569, 0.23921569, 0.64705884)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
 
 [node name="done_screen" type="Node2D" unique_id=484987828]
 script = ExtResource("1_3rr80")
 
-[node name="Background" type="TextureRect" parent="." unique_id=632546623]
-offset_left = -31.0
-offset_top = -9.0
-offset_right = 1169.0
-offset_bottom = 666.0
+[node name="Background" type="TextureRect" parent="." unique_id=2058129169]
+offset_left = -11.0
+offset_top = -119.0
+offset_right = 975.0
+offset_bottom = 538.0
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_3rr80")
 
-[node name="Title" type="RichTextLabel" parent="Background" unique_id=1981577390]
+[node name="Title" type="RichTextLabel" parent="." unique_id=1981577390]
 clip_contents = false
-layout_mode = 0
-offset_left = 324.0
-offset_top = 132.0
-offset_right = 1030.0
-offset_bottom = 265.0
+offset_left = 328.0
+offset_top = 138.0
+offset_right = 806.0
+offset_bottom = 271.0
 theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 90
 text = "YOU WON!"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1285624281]
-offset_left = 393.0
-offset_top = 306.0
-offset_right = 743.0
-offset_bottom = 446.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=790065859]
+offset_left = 395.0
+offset_top = 310.0
+offset_right = 745.0
+offset_bottom = 470.0
+theme_override_constants/separation = 20
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=109997748]
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1089382177]
 layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rr80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1q1k2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8rpo2")
 text = "Try Again"
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1260672165]
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1470599136]
 layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
-text = "Home"
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rr80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1q1k2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8rpo2")
+text = "Settings"
 
-[node name="Quit" type="Button" parent="VBoxContainer" unique_id=75823460]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=446294300]
 layout_mode = 2
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rr80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1q1k2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8rpo2")
 text = "Quit"
+
+[node name="Christina" type="TextureRect" parent="." unique_id=366207892]
+offset_left = 654.0
+offset_top = 70.0
+offset_right = 1854.0
+offset_bottom = 1672.0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("3_8rpo2")
+
+[node name="Meredith" type="TextureRect" parent="." unique_id=1054351384]
+offset_left = 134.0
+offset_top = 69.0
+offset_right = 264.0
+offset_bottom = 565.0
+texture = ExtResource("4_5u8ma")
+
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

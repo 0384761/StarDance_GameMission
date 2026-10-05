@@ -41,7 +41,7 @@ func _on_item_selected(index: int) -> void:
 			bg_music.play()
 		3:
 			Global.music = 3
-			bg_music.set_stream(current_music.load_from_file("res://addons/SnowPatrol.mp3"))
+			bg_music.set_stream(current_music.load_from_file("res://addons/ThemeSong.mp3"))
 			bg_music.play()
 
 func _on_back_pressed() -> void:
