@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://c2fms614si104" path="res://Scenes/wrong_ans.gd" id="3_6fpek"]
 [ext_resource type="Script" uid="uid://f1mnoh77gd73" path="res://Scenes/right_ans.gd" id="4_8pd31"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="5_k207s"]
-[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="6_6fpek"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tspt"]
 bg_color = Color(0, 0, 0, 0.64705884)
@@ -83,14 +82,6 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_4tspt")
 text = "D. Amelia"
 script = ExtResource("4_8pd31")
-
-[node name="HowTo" type="TextureRect" parent="." unique_id=1047523509]
-visible = false
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1199.0
-offset_bottom = 799.0
-texture = ExtResource("6_6fpek")
 
 [node name="Incorrect" type="ColorRect" parent="." unique_id=1592814461]
 visible = false

@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="3_we0jk"]
 [ext_resource type="Script" uid="uid://c2fms614si104" path="res://Scenes/wrong_ans.gd" id="4_lr4ld"]
 [ext_resource type="Script" uid="uid://f1mnoh77gd73" path="res://Scenes/right_ans.gd" id="5_rpf30"]
-[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="6_rpf30"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvnsp"]
 bg_color = Color(0, 0, 0, 0.64705884)
@@ -83,33 +82,6 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_cvnsp")
 text = "D. George"
 script = ExtResource("4_lr4ld")
-
-[node name="HowTo" type="TextureRect" parent="." unique_id=1049822306]
-offset_left = -30.0
-offset_top = -170.0
-offset_right = 1170.0
-offset_bottom = 730.0
-texture = ExtResource("6_rpf30")
-
-[node name="Tint" type="ColorRect" parent="HowTo" unique_id=1632961839]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 164.0
-offset_right = 1190.0
-offset_bottom = 826.0
-color = Color(0, 0, 0, 0.64705884)
-
-[node name="Instructions2" type="RichTextLabel" parent="HowTo/Tint" unique_id=96686332]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 57.0
-offset_right = 1098.0
-offset_bottom = 582.0
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 60
-text = "MINIGAME 3 (Trivia):
-
-Choose the correct option for each question (out of A, B, C, or D). Press the button to confirm your answer, and do it before the time runs out!"
 
 [node name="Correct" type="ColorRect" parent="." unique_id=228642668]
 visible = false

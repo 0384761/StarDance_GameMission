@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $Themed_Timer 
-@onready var howTo: TextureRect = $HowTo
 @onready var pauseMenu: ColorRect = $OuterMenu
 
 var heart_collected = 0 
@@ -11,9 +10,6 @@ var timer_end = false
 
 func _ready() -> void:
 	
-	if howTo.is_visible_in_tree():
-		await get_tree().create_timer(5.0).timeout
-	howTo.hide()
 	await themed_timer.Timer(10.0) 
 	timer_end = true
 	

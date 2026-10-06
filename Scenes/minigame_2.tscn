@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dstnbdsx6nthq" path="res://addons/bomb-removebg-preview.png" id="6_cqly6"]
 [ext_resource type="Script" uid="uid://diqlkvjffocsb" path="res://Scenes/bad_button.gd" id="7_1ja6b"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_cqly6"]
-[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="9_qs5pj"]
 [ext_resource type="Texture2D" uid="uid://dst2vfvtav6" path="res://addons/explosion.png" id="10_1ja6b"]
 
 [node name="minigame_2" type="Node2D" unique_id=164351163]
@@ -87,34 +86,6 @@ offset_bottom = 71.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
 text = "LEVEL 1/2  (PAUSE : CTRL)"
-
-[node name="HowTo" type="TextureRect" parent="." unique_id=85443209]
-offset_left = -30.0
-offset_top = -170.0
-offset_right = 1170.0
-offset_bottom = 730.0
-texture = ExtResource("9_qs5pj")
-
-[node name="Tint" type="ColorRect" parent="HowTo" unique_id=2059424623]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 164.0
-offset_right = 1190.0
-offset_bottom = 826.0
-color = Color(0, 0, 0, 0.64705884)
-
-[node name="Instructions2" type="RichTextLabel" parent="HowTo/Tint" unique_id=1628847599]
-layout_mode = 0
-offset_left = 56.0
-offset_top = 57.0
-offset_right = 1098.0
-offset_bottom = 582.0
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 60
-text = "MINIGAME 2 (Clicker): 
-
-Pick up (click on) all the items before the time runs out! Watch out for trick items- these are dangerous! 
-"
 
 [node name="OuterMenu" type="ColorRect" parent="." unique_id=2090108306]
 visible = false

@@ -1,21 +1,108 @@
 [gd_scene format=3 uid="uid://ci767ejaourx8"]
 
+[ext_resource type="Script" uid="uid://tymutma3qity" path="res://Scenes/lose_screen.gd" id="1_488pv"]
 [ext_resource type="Texture2D" uid="uid://difi8yxvcp7eu" path="res://addons/greys4.jpg" id="1_s2rrh"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2rrh"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.64705884)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_488pv"]
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 0.64705884)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.18039216, 0.18039216, 0.18039216, 0.64705884)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go37l"]
+bg_color = Color(0.24115604, 0.24115604, 0.24115604, 0.64705884)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23921569, 0.23921569, 0.23921569, 0.64705884)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
 [node name="lose_screen" type="Node2D" unique_id=56694313]
+script = ExtResource("1_488pv")
 
 [node name="Background" type="TextureRect" parent="." unique_id=706862012]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_s2rrh")
 
-[node name="Title" type="RichTextLabel" parent="Background" unique_id=2020898885]
+[node name="Title" type="RichTextLabel" parent="." unique_id=65813429]
 clip_contents = false
-layout_mode = 0
-offset_left = 406.0
-offset_top = 149.0
-offset_right = 1112.0
-offset_bottom = 282.0
+offset_left = 280.0
+offset_top = 142.0
+offset_right = 916.0
+offset_bottom = 275.0
 theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 90
-text = "Uh Oh... "
+text = "GAME OVER... "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=706294348]
+offset_left = 395.0
+offset_top = 310.0
+offset_right = 745.0
+offset_bottom = 470.0
+theme_override_constants/separation = 20
+
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=816149753]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_s2rrh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_488pv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_go37l")
+text = "Try Again"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=849846238]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_s2rrh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_488pv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_go37l")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1255021629]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_s2rrh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_488pv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_go37l")
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

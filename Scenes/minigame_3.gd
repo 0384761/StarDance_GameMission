@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var themed_timer: Node2D = $Themed_Timer 
-@onready var howTo: TextureRect = $HowTo
 @onready var pauseMenu: ColorRect = $OuterMenu
 
 var answer_one = false
@@ -12,23 +11,10 @@ var timer_end = false
 
 func _ready() -> void:
 	
-	if howTo.is_visible_in_tree():
-		await get_tree().create_timer(5.0).timeout
-	howTo.hide()
 	await themed_timer.Timer(10.0) 
 	timer_end = true 
 
-
 func _process(delta: float) -> void:
-	
-	#if correct_answers > 3:
-		#get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-	#elif correct_answers > 2:
-		#get_tree().change_scene_to_file("res://Scenes/minigame_3d.tscn")
-	#elif correct_answers > 1:
-		#get_tree().change_scene_to_file("res://Scenes/minigame_3c.tscn")
-	#elif correct_answers > 0:
-		#get_tree().change_scene_to_file("res://Scenes/minigame_3b.tscn")
 	
 	if answer_one:
 		answer_one = false

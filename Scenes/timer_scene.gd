@@ -18,7 +18,6 @@ var time
 var bw = "res://addons/themillionthheartb&w.png"
 
 func _ready() -> void:
-	Global.lives = 3
 	await Timer(5.0) 
 	
 	if Global.lives == 0:
@@ -26,7 +25,7 @@ func _ready() -> void:
 	else: 
 		if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
 			Global.minigames_done = Global.minigames_done +1
-			get_tree().change_scene_to_file("res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path. 
+			get_tree().change_scene_to_file("res://Scenes/path_screen.tscn") # changes your scene by arranging this frankenstein path. 
 		else: 
 			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn") # changes your scene
 
@@ -34,9 +33,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void: # runs EVERY FRAME
 	
-	match Global.lives: # asks or checks if lives is equal to one of 
-#these values, cool hack. by the way this is a horrid way to illustrate the 
-#lives visually so later you can always find alternative code. Now, dw abt it.
+	match Global.lives: 
 
 		4:
 			heart5.texture = load(bw)

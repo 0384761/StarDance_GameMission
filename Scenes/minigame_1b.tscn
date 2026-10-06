@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://bleucsuydsq3g" path="res://Scenes/brain.gd" id="3_4jh0i"]
 [ext_resource type="PackedScene" uid="uid://ddxbnu2tx4joi" path="res://Scenes/player.tscn" id="3_mxoau"]
 [ext_resource type="PackedScene" uid="uid://c164hslf0f87t" path="res://Scenes/Themed_Timer.tscn" id="4_4jh0i"]
-[ext_resource type="Texture2D" uid="uid://cpfb8y0e84qkx" path="res://addons/greys7.jpg" id="7_bct07"]
 [ext_resource type="PackedScene" uid="uid://bf8ravdqmnyrr" path="res://Scenes/pause_menu.tscn" id="9_g4bw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bct07"]
@@ -212,14 +211,6 @@ offset_bottom = 76.0
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 30
 text = "LEVEL 2/3  (PAUSE : CTRL)"
-
-[node name="HowTo" type="TextureRect" parent="." unique_id=1276432173]
-visible = false
-offset_left = -11.0
-offset_top = -8.0
-offset_right = 1189.0
-offset_bottom = 792.0
-texture = ExtResource("7_bct07")
 
 [node name="OuterMenu" type="ColorRect" parent="." unique_id=1753692052]
 visible = false
